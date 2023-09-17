@@ -1,0 +1,164 @@
+@charset "UTF-8";
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  place-items: center;
+  place-content: center;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+
+.about-container {
+  font-size: .8rem;
+  padding: 0 .8rem 0 .8rem;
+  width: 80%;
+  margin: auto;
+}
+
+.wrapper__emoji {
+  min-height: 100px;
+}
+
+.wrapper__emoji:hover::after {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.wrapper__emoji::after {
+  content: '';
+  font-size: 3rem;
+  animation: 20s infinite reverse change-emoji-icon steps(20);
+}
+
+
+@-webkit-keyframes change-emoji-icon {
+  5% {
+    content: '🐵';
+  }
+  10% {
+    content: '🙈';
+  }
+  15% {
+    content: '🙉';
+  }
+  20% {
+    content: '🙊';
+  }
+  25% {
+    content: '🐵';
+  }
+  30% {
+    content: '🙈';
+  }
+  35% {
+    content: '🙉';
+  }
+  40% {
+    content: '🙊';
+  }
+  45% {
+    content: '🐒';
+  }
+  50% {
+    content: '🐵';
+  }
+  55% {
+    content: '🙈';
+  }
+  60% {
+    content: '🙉';
+  }
+  65% {
+    content: '🙊';
+  }
+  70% {
+    content: '🐒';
+  }
+  75% {
+    content: '🐵';
+  }
+  80% {
+    content: '🙈';
+  }
+  85% {
+    content: '🙉';
+  }
+  90% {
+    content: '🙊';
+  }
+  95% {
+    content: '🐒';
+  }
+  100% {
+    content: '🙈';
+  }
+}
+
+@keyframes change-emoji-icon {
+  5% {
+    content: '🐵';
+  }
+  10% {
+    content: '🙈';
+  }
+  15% {
+    content: '🙉';
+  }
+  20% {
+    content: '🙊';
+  }
+  25% {
+    content: '🐵';
+  }
+  30% {
+    content: '🙈';
+  }
+  35% {
+    content: '🙉';
+  }
+  40% {
+    content: '🙊';
+  }
+  45% {
+    content: '🐒';
+  }
+  50% {
+    content: '🐵';
+  }
+  55% {
+    content: '🙈';
+  }
+  60% {
+    content: '🙉';
+  }
+  65% {
+    content: '🙊';
+  }
+  70% {
+    content: '🐒';
+  }
+  75% {
+    content: '🐵';
+  }
+  80% {
+    content: '🙈';
+  }
+  85% {
+    content: '🙉';
+  }
+  90% {
+    content: '🙊';
+  }
+  95% {
+    content: '🐒';
+  }
+  100% {
+    content: '🙈';
+  }
+}
