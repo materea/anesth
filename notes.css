@@ -327,11 +327,20 @@ figure img {
 
 
 
+
 .note-table {
   border-collapse: collapse;
   width: 100%;
   border: 2px solid var(--color-ash);
+  overflow-x: auto;
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
 .note-table th, td {
   border: 1px solid #ccc;
   padding: 10px;
@@ -339,6 +348,14 @@ figure img {
 }
 .note-table th {
   background-color: #f2f2f2;
+}
+ 
+
+@media (max-width:600px) {
+  th, td {
+    padding: 4px;
+    font-size: 0.7rem;
+  }
 }
 
 
@@ -360,7 +377,7 @@ figure img {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
 
 }
 
@@ -369,11 +386,14 @@ figure img {
   display: block;
   max-width: 90%;
   max-height: 90%;
-
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .close {
-  color: var(--color-ash);
+  color: white;
   border-radius: 10px;
   padding: 0 .5rem 0 .5rem;
   position: absolute;
@@ -388,4 +408,12 @@ figure img {
   text-align: center;
   margin-top: 10px;
   color: white;
+  background-color: var(--color-darker);
+  padding: 5px;
+  font-size: 0.6rem;
+}
+
+#caption {
+  position: absolute;
+  bottom: 3%;
 }
