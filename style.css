@@ -1480,3 +1480,23 @@ figcaption {
 .more-resources-card .card-icon {
   margin-right: 1rem;
 }
+
+
+/* youtube videos */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; 
+  height: 0;
+  overflow: hidden;
+  width: 85%;
+  margin: 2rem auto;
+  border: 2px solid var(--color-darker); /* Blue border */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 3%;
+  left: 2.5%;
+  width: 95%;
+  height: 94%;
+}
