@@ -24,3 +24,19 @@ var trigger = document.getElementById("popup-trigger");
 trigger.addEventListener("click", showPopup);
 
 
+// Function to toggle dark mode
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle("dark-mode");
+}
+
+// Event listener for the toggle switch
+const darkModeToggle = document.getElementById("dark-mode-toggle-checkbox");
+darkModeToggle.addEventListener("change", toggleDarkMode);
+
+// Check the user's preferred color scheme and set initial state
+const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+if (prefersDarkMode) {
+    darkModeToggle.checked = true;
+    toggleDarkMode();
+}

@@ -1,19 +1,4 @@
-/* :root {
-  --color-primary: #172a46;
-  --color-primary: #9da8c7;
-  --color-primary: #08162a;
-  --color-darker: #03080f;
-  --color-darker: #749bd1;
-  --color-darker: #ccd6f6;
-  --color-yellow: #faa356;
-  --color-red: #fa7970;
-  --color-secondary: #7ce38b;
-  --color-ash: #89929b;
-  --font-family-primary: 'Roboto Mono', monospace;
-  --font-family-secondary: 'Rubik Mono One', sans-serif;
-  --td: 150ms;
-  --te: cubic-bezier(0.215, 0.61, 0.355, 1);
-} */
+
 
 :root {
   --color-primary: #fff;
@@ -30,6 +15,13 @@
   --font-family-secondary: 'Rubik Mono One', sans-serif;
   --td: 150ms;
   --te: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+      /* Dark Mode Colors */
+      --color-primary-dark: #081526;
+      --color-ash-dark: #0f9f85;
+      --color-darker-dark: #c9d7f2;
+      --color-secondary-dark: #152840;
+      --color-tertiary-dark: #7b8da6;
 }
 
 html {
@@ -51,9 +43,9 @@ html {
     font-size: 3rem;
   }
   
-  .notes article section {
+  /* .notes article section {
     background-color: inherit;
-  }
+  } */
   
   .notes article section > * {
     background-color: var(--color-primary);
@@ -416,4 +408,70 @@ table {
 #caption {
   position: absolute;
   bottom: 3%;
+}
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: var(--color-primary-dark);
+  color: var(--color-darker-dark);
+}
+
+.dark-mode .notes article section > * {
+  background-color: var(--color-primary-dark);
+
+}
+
+.dark-mode .notes article section section > header {
+  border-bottom: 1px solid var(--color-ash-dark);
+}
+
+.dark-mode .notes article section > header {
+  border-bottom: 2px solid var(--color-ash-dark);
+}
+
+.dark-mode .notes article section section section > header {
+  border-bottom: 1px dotted var(--color-ash-dark);
+}
+
+.dark-mode .notes header a{
+  color: var(--color-darker-dark);
+}
+
+.dark-mode .outline2 .contents {
+  transition: 0.2s ease-in;
+  opacity: 0;
+  background-color: var(--color-secondary-dark);
+  color: var(--color-darker-dark);
+  border-radius: 7px;
+  line-height: 2;
+}
+
+.dark-mode .outline2 .contents a{
+  color: var(--color-darker-dark);
+}
+
+.dark-mode .outline2 label[for^=show] {
+  background: var(--color-secondary-dark);
+  color: var(--color-darker-dark);
+}
+
+.dark-mode .outline2 label[for^=hide] {
+  background: var(--color-secondary-dark);
+  color: var(--color-darker-dark) ;
+  display: none;
+  font-weight: 600;
+}
+
+.dark-mode .note-table th {
+  background-color: var(--color-secondary-dark);
+}
+
+.dark-mode .caption {
+  text-align: center;
+  margin-top: 10px;
+  color: var(--color-darker-dark);
+  background-color: var(--color-secondary-dark);
+  padding: 5px;
+  font-size: 0.6rem;
 }
