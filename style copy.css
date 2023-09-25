@@ -1509,11 +1509,7 @@ figcaption {
   border-radius: 18px;
 }
 
-label.switch-toggle {
-  margin: 0;
-  padding: 0;
-  background-color: var(--color-secondary);
-}
+
 .toggle-slider {
   position: relative;
   width: 40px;
