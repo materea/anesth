@@ -50,6 +50,7 @@ html {
   .notes article section > * {
     background-color: var(--color-primary);
     margin-bottom: 40px;
+    padding: 10x;
   }
   
   .notes article section header {
