@@ -1142,7 +1142,6 @@ iframe {
 
 /* ------------IMAGE-SLIDER------------ */
 
-@charset "UTF-8";
 /*---- NUMBER OF SLIDE CONFIGURATION ----*/
 .wrapper {
   max-width: 60em;
@@ -1429,7 +1428,6 @@ figcaption {
   top: 50%;
   left: 50%;
   width: 80%;
-  
   transform: translate(-50%, -50%);
   background-color: #fff;
   padding: 20px;
@@ -1601,17 +1599,57 @@ body.dark-mode {
   background-color: var(--color-secondary-dark);
 }
 
-.dark-mode.page-header {
+.dark-mode .page-header {
   width: 80%;
   margin: 1rem auto;
   background-color: var(--color-secondary-dark);
-   color: var(--color-darker);
-  }
-
-.dark-mode .topics {
-    background-color: var(--color-secondary-dark);
+   color: var(--color-darker-dark);
   }
   
 .dark-mode .dark-mode-toggle {
     background-color: var(--color-darker-dark);
   }
+
+  .dark-mode .nav-main::before, .dark-mode .nav-main::after {
+    background-color: var(--color-secondary-dark);
+  }
+
+  .dark-mode .flat-btn{
+    background: var(--color-secondary-dark);
+    color: var(--color-darker-dark);
+  }
+
+.dark-mode .scrollup{
+  background-color: var(--color-secondary-dark);
+}
+
+.dark-mode .popup {
+  background-color: var(--color-secondary-dark);
+  border: none;
+}
+
+.dark-mode .popup p {
+  color: var(--color-darker-dark);
+}
+
+.dark-mode .popup-close {
+  background-color: var(--color-primary-dark);
+  color: var(--color-darker-dark);
+
+}
+
+.dark-mode #searchInput {
+  background-color: var(--color-secondary-dark);
+  border: none;
+  color: var(--color-darker-dark);
+  margin-bottom: 20px;
+}
+
+.dark-mode .topics ul li a{
+  color: var(--color-darker-dark);
+}
+
+.dark-mode .topics ul li {
+
+  border-top: 1px solid var(--color-ash-dark);
+}

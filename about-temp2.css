@@ -19,6 +19,7 @@
   padding: 0 .8rem 0 .8rem;
   width: 80%;
   margin: auto;
+  background-color: transparent;
 }
 
 .wrapper__emoji {
@@ -162,3 +163,4 @@
     content: '🙈';
   }
 }
+
