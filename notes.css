@@ -2,15 +2,12 @@
 
 :root {
   --color-primary: #fff;
-  --color-primary: #fff;
-  --color-primary: #fff;
   --color-darker: #001028;
-  --color-darker: #001028;
-  --color-darker: #001028;
-  /* --color-yellow: #faa356; */
-  --color-red: #7e3b36;
+  --color-yellow: #f4b400;
+  --color-green: #4caf50;
+  --color-red: #f44336;
   --color-secondary: #57a2f8;
-  --color-ash: #89929b;
+  --color-ash: #747474;
   --font-family-primary: 'Poppins', sans-serif;
   --font-family-secondary: 'Rubik Mono One', sans-serif;
   --td: 150ms;
@@ -297,6 +294,7 @@ figcaption {
 
 .contact a{
   text-decoration: none;
+  color: var(--color-green);
 }
 
 .msg {
