@@ -1473,6 +1473,10 @@ figcaption {
 }
 .more-resources-card .card-icon {
   margin-right: 1rem;
+  margin-left: 1rem;
+  background-color: var(--color-secondary);
+  padding: 10px;
+  border-radius: 7px;
 }
 
 
@@ -1652,4 +1656,24 @@ body.dark-mode {
 .dark-mode .topics ul li {
 
   border-top: 1px solid var(--color-ash-dark);
+}
+
+
+.dark-mode .more-resources-card {
+  background-color: var(--color-secondary-dark);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+.dark-mode .more-resources-card a{
+  text-decoration: none;
+  color: var(--color-darker-dark);
+}
+
+.dark-mode .more-resources-card .card-icon {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  background-color: var(--color-primary-dark);
+  padding: 10px;
+  border-radius: 7px;
 }
