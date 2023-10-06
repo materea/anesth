@@ -1454,7 +1454,7 @@ figcaption {
 
 /* more-resources */
 .more-resources-card {
-  background-color: #fff;
+  background-color: var(--color-darker);
   border-radius: 7px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   padding: 0.5rem;
@@ -1469,7 +1469,7 @@ figcaption {
 
 .more-resources-card a{
   text-decoration: none;
-  color: var(--color-darker);
+  color: var(--color-primary);
 }
 .more-resources-card .card-icon {
   margin-right: 1rem;
