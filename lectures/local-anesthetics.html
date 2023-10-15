@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+  <title>Local Anesthetic Pharmacology</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../notes.css">
+</head>
+<body>
+  <input type="checkbox" id="main-navigation-toggle" class="btn btn--close" title="Toggle main navigation" />
+  <label for="main-navigation-toggle">
+    <span></span>
+  </label>
+  
+  <a href="../index.html">
+   <div class="home-navigation">
+      mtr<span class="logo-dot">.</span>
+    </div>
+  </a>
+
+
+    <nav id="main-navigation" class="nav-main">
+    <ul class="menu">
+      <li class="menu__item">
+        <a class="menu__link" href="../index.html">Home</a>
+      </li>
+
+      <li class="menu__item">
+        <a class="menu__link" href="../about-temp2.html">About</a>
+      </li>
+    </ul>
+  </nav>
+  
+      <!-- Toggle switch for dark mode -->
+      <div class="dark-mode-toggle">
+        <label class="switch-toggle">
+            <input type="checkbox" id="dark-mode-toggle-checkbox">
+            <span class="toggle-slider"></span>
+        </label>
+      </div>
+      
+  <main class="page-container">
+    <div class="contribute-cta">
+      <p>Help make this better💜</p>
+      <span><a href="../contribute.html">Contribute here</a> </span>
+    </div>
+
+    <h1>Local Anesthetic Pharmacology</h1>
+  
+    <!-- <div class="author-flex">
+      <div class="author-img">
+        <img  src="/contributors/vt1.jpeg" alt="">
+      </div>
+      <div>
+        <h2 class="name">Compiled by Victortayo</h2>
+        <p class="updated">last updated</p>
+      </div>
+    </div> -->
+
+    <article class="notes">
+        <a id='top'></a>
+    <article>
+    <!-- <h2 class='title'>Outline</h2> -->
+
+    <div class="outline2">
+
+      <input type="radio" name="control-2" id="show-2">
+      <label for="show-2">Show Outline</label>
+      <input type="radio" name="control-2" id="hide-2">
+      <label for="hide-2">Hide Outline</label>
+      <div class="contents">
+        <ol>
+          <li><a href="#header-1">Introduction</a></li>
+          <li><a href="#header-2">History: It all started with cocaine</a></li>
+          <li><a href="#header-3">Classification</a></li>
+          <li><a href="#header-4">Mechanism of Action</a></li>
+          <li><a href="#header-5">Factors that determine action of LA</a></li>
+          <li><a href="#header-6">Metabolism</a></li>
+          <li><a href="#header-7">Systemic Absorption</a></li>
+          <li><a href="#header-8">Acute toxicity</a></li>
+          <li><a href="#header-9">Drug Interactions</a></li>
+          <li><a href="#header-10">Dosing Guidelines (nerve block)</a></li>
+
+       </ol>
+      </div>
+     <div>
+
+
+      <section id='header-1'>
+        <header>
+          <h2>
+            <a aria-hidden='true' href='#header-1'>Introduction</a>
+          </h2>
+        </header>
+        <div class='body'>
+          <p><strong>Local anaesthetic agents</strong> can be defined as drugs used clinically to produce a reversible loss of sensation in a circumscribed area of the body.</p>
+          <p>Most of the clinically useful local anaesthetic agents consist of an aromatic ring linked by a carbonyl-containing moiety through a carbon chain to a substituted amino group.</p>
+          
+        </div>
+
+      </section>
+
+      <section id='header-2'>
+        <header>
+          <h2>
+            <a aria-hidden='true' href='#header-2'>History: It all started with cocaine</a>
+          </h2>
+        </header>
+        <div class='body'>
+          <ul>
+              <li>Incas used cocaine as a topical anesthetic, dating back to 3000 B.C.</li>
+              <li>1860: Cocaine isolated from coca leaves by Paolo Mantegazza, who tested it on himself.</li>
+              <li>1860: Cocaine formulated into "Dr. Mariani's French Tonic," for which Dr. Mariani received a gold medal from Pope Leo XIII.</li>
+              <li>1884: Cocaine used for topical ophthalmic anesthesia by Carl Koller (at the suggestion of Freud).</li>
+          </ul>
+          
+
+            <!-- image here -->
+            <div class="image-container">
+              <img src="../figures/" alt="" onclick="openModal(this)">
+              <div class="caption">1885 Advertisement</div>
+            </div>
+            
+            <div id="myModal" class="modal">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <img class="modal-content" id="modalImage">
+              <div id="caption" class="caption">1885 Advertisement</div>
+            </div>
+
+            <ul>
+              <li>1984: Cocaine used for peripheral nerve block (Halstead)</li>
+              <li>1886: John S. Pemberton invented Coca Cola, combining cocaine with Cola nitida extract (kola nut).</li>
+              <li>1898: Cocaine first used for spinal anesthesia (Bier) - He personally developed PDPH, which he correctly diagnosed!</li>
+              <li>By 1900, the addictive properties of cocaine were well recognized.</li>
+              <li>1904: Fourneau develops stovaine, promptly forgotten</li>
+              <li>1905: Einhorn develops procaine, introduced into clinical practice by Braun. Einhorn called it novocaine, for "new cocaine." He demonstrated that it had all the anesthetic effects, and none of the addictive potential.</li>
+          </ul>
+          
+        </div>
+      </section>
+
+      <section id='header-3'>
+        <header>
+          <h2>
+            <a aria-hidden='true' href='#header-3'>Classification</a>
+          </h2>
+        </header>
+        <div class='body'>
+          <p>The local anesthetic molecule consists of three parts:</p>
+          <ol>
+              <li>Aromatic group</li>
+              <li>Linking chain</li>
+              <li>Tertiary amine</li>
+          </ol>
+          <p>There are 2 classes of local anesthetic drugs defined by the nature of the carbonyl-containing linkage group:</p>
+          <ul>
+              <li>Amide link (NH.CO-)</li>
+              <li>Ester link (-COO-)</li>
+          </ul>
+          
+          <h4>Amides:</h4>
+          <ul>
+              <li>Lignocaine</li>
+              <li>Prilocaine</li>
+              <li>Mepivacaine</li>
+              <li>Bupivacaine</li>
+          </ul>
+          <p>Relatively stable in solution, are slowly metabolized by hepatic amidases and hypersensitivity reactions to amide local anesthetics are extremely rare.</p>
+          
+          <h4>Esters:</h4>
+          <ul>
+              <li>Cocaine</li>
+              <li>Procaine</li>
+              <li>Amethocaine</li>
+              <li>Chloroprocaine</li>
+          </ul>
+          <p>Relatively unstable in solution and are rapidly hydrolyzed in the body by plasma cholinesterase (and other esterases). One of the main breakdown products is para-amino benzoate (PABA), which is associated with allergic phenomena and hypersensitivity reactions.</p>
+          
+        </div>
+      </section>
+
+      <section id='header-4'>
+        <header>
+          <h2>
+            <a aria-hidden='true' href='#header-4'>Mechanism of Action</a>
+          </h2>
+        </header>
+        <div class='body'>
+          <div>
+            <p>Local anaesthetics cause reversible interruption of the conduction of impulses in peripheral nerves.</p>
+            <p>The primary electrophysiological effect of these compounds is to cause a local decrease in the rate and degree of depolarization of the nerve membrane such that the threshold potential for transmission is not reached, and the electrical impulse is not propagated down the nerve. These effects are due to blockade of sodium channels, thereby impairing sodium ion flux across the membrane.</p>
+            <p><strong>Blocks the sodium channel</strong></p>
+            <p>Wide-ranging effects on the nervous system</p>
+            <p>Local anaesthetics block the channel from the intracellular side.</p>
+            <p><strong>Must enter the neuron to work</strong></p>
+            <p><strong>Increased lipophilicity is associated with increased potency</strong></p>
+            <p><strong>Increased un-ionized fraction increases potency</strong></p>
+            <p>The un-ionized molecule crosses the cell membrane.</p>
+            <p>Adding bicarbonate increases the un-ionized fraction.</p>
+            <p>Tetrodotoxin binds the sodium channel from the outside.</p>
+
+              <p>Most local anaesthetic agents are tertiary amine bases (B) that are administered as water-soluble hydrochlorides (B.HCl).</p>
+              <p>After injection, the tertiary amine base is liberated by the relatively alkaline pH of tissue fluids:</p>
+              <p>B.HCl + HCO<sub>3</sub> &lt;--&gt; B + H<sub>2</sub>CO<sub>3</sub> + Cl-</p>
+              <p>In tissue fluid, the local anaesthetic will be present in both an ionized (BH<sup>+</sup>) and non-ionized form (B); their relative proportions will depend on the pH of the solution and the pKa of the individual drug.</p>
+              <p><strong>The non-ionized base (B) then diffuses through the nerve sheath, perineuronal tissues, and the neuronal membrane, to reach the axoplasm where it partially ionizes again.</strong></p>
+              <p>B + H<sup>+</sup> &lt;--&gt; BH<sup>+</sup></p>
+          
+        </div>
+        
+        </div>
+      </section>
+
+      <section id='header-5'>
+        <header>
+          <h2>
+            <a aria-hidden='true' href='#header-5'>Factors Affecting Local Anesthetic Action</a>
+          </h2>
+        </header>
+        <div class='body'>
+          <h4>Intrinsic Properties Affecting Local Anesthetic Action</h4>
+          <ul>
+              <li><strong>Lipid Solubility:</strong> Correlates with potency</li>
+              <li><strong>pKa (Acid Dissociation Constant):</strong> Correlates with the onset of action</li>
+              <li><strong>Protein Binding:</strong> Correlates with the duration of action</li>
+          </ul>
+
+
+          <h4>Nerves</h4>
+          <ul>
+              <li><strong>Small Diameter Nerves:</strong> Small diameter nerves are more easily blocked than large diameter nerves.</li>
+              <li><strong>Myelinated Nerves:</strong> For nerves of the same diameter, myelinated nerves will be blocked before unmyelinated nerves.</li>
+              <p><strong>Why Preganglionic Nerves:</strong> Preganglionic nerves are blocked before the smaller unmyelinated C fibers (pain nerves) in spinal anesthesia.</p>
+              <li><strong>Nerves that Fire Frequently:</strong> Nerves that fire frequently are preferentially blocked over nerves that fire infrequently.</li>
+          </ul>
+          
+          
+          <h4>Rate of Onset</h4>
+          <ul>
+              <li><strong>Potency:</strong> Correlates closely with lipophilicity, with more lipophilic local anesthetics being more potent.</li>
+              <li><strong>Dose:</strong> Increased dose, either by increasing volume or increasing concentration, accelerates the rate of onset.</li>
+              <li><strong>Un-ionized Fraction:</strong> Adding bicarbonate accelerates the rate of onset.</li>
+              <li><strong>Epinephrine:</strong> Reduces the rate at which the drug washes away.</li>
+              <li><strong>Elimination Pharmacokinetics:</strong> Rapidly eliminated drugs demonstrate rapid onset because they are given in relatively higher doses. For example, the intrinsic rate of onset of succinylcholine is fairly slow, but the rapid clearance permits administration of a huge overdose, which clinically results in the rapid onset of drug effect.</li>
+          </ul>
+
+          <h4>Potency, pKa, Lipophilicity</h4>
+
+                      <!-- image here -->
+                      <div class="image-container">
+                        <img src="../figures/" alt="" onclick="openModal(this)">
+                        <div class="caption"></div>
+                      </div>
+                      
+                      <div id="myModal" class="modal">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <img class="modal-content" id="modalImage">
+                        <div id="caption" class="caption"></div>
+                      </div>
+
+
+                      <h4>Addition of Bicarbonate</h4>
+                      <ul>
+                          <li><strong>Lidocaine:</strong> 1 cc bicarb / 10 cc drug</li>
+                          <li><strong>Mepivacaine:</strong> 1 cc bicarb / 10 cc drug</li>
+                          <li><strong>Bupivacaine:</strong> 0.1 cc / 10 cc <em>(Note: Hard to not get precipitation)</em></li>
+                          <li><strong>Levobupivacaine:</strong> Same as bupivacaine</li>
+                      </ul>
+
+
+                      <h4>Duration of Action</h4>
+                      <ul>
+                          <li><strong>Rate of Systemic Absorption:</strong></li>
+                          <ul>
+                              <li>Tissue Vascularity</li>
+                              <li>Use of Epinephrine</li>
+                          </ul>
+                          <li><strong>Rate of Elimination:</strong></li>
+                          <ul>
+                              <li>Particularly for esters, which are metabolized locally</li>
+                          </ul>
+                          <li><strong>General Groups:</strong></li>
+                          <ul>
+                              <li>Short: Procaine, chloroprocaine</li>
+                              <li>Intermediate: Lidocaine, mepivacaine, prilocaine</li>
+                              <li>Long Acting: Tetracaine, bupivacaine, etidocaine, ropivacaine, levobupivacaine</li>
+                          </ul>
+                      </ul>
+                      
+                      
+          
+        </div>
+      </section>
+
+      <section id='header-6'>
+        <header>
+          <h2>
+            <a aria-hidden='true' href='#header-6'>Metabolism</a>
+          </h2>
+        </header>
+        <div class='body'>
+          <ul>
+              <li><strong>Amides:</strong></li>
+              <ul>
+                  <li>Primarily hepatic</li>
+                  <li>Plasma concentration may accumulate with repeated doses</li>
+                  <li>Toxicity is dose-related and may be delayed by minutes or even hours from the time of the dose.</li>
+              </ul>
+              <li><strong>Esters:</strong></li>
+              <ul>
+                  <li>Ester hydrolysis in the plasma by pseudocholinesterase</li>
+                  <li>Almost no potential for accumulation</li>
+                  <li>Toxicity is either from direct IV injection (e.g., tetracaine, cocaine) or persistent effects of exposure (e.g., benzocaine, cocaine).</li>
+              </ul>
+          </ul>
+          
+        </div>
+      </section>
+
+      <section id='header-7'>
+        <header>
+          <h2>
+            <a aria-hidden='true' href='#header-7'> Systemic Absorption</a>
+          </h2>
+        </header>
+        <div class='body'>
+          <ul>
+              <li><strong>Dose</strong></li>
+              <li><strong>Vascularity:</strong></li>
+              <ul>
+                  <li>Intercostal > Caudal > Epidural > Brachial > Infiltration</li>
+              </ul>
+              <li><strong>pH:</strong></li>
+              <ul>
+                  <li>Slower absorption if the solution is alkaline because more is bound into the tissues.</li>
+              </ul>
+              <li><strong>Lipophilicity:</strong></li>
+              <ul>
+                  <li>Slower absorption for more lipophilic drugs because more is bound in the tissues.</li>
+              </ul>
+              <li><strong>Epinephrine:</strong></li>
+              <ul>
+                  <li>Decreases local blood flow, decreasing absorption.</li>
+              </ul>
+          </ul>
+          
+        </div>
+      </section>
+
+      <section id='header-8'>
+        <header>
+          <h2>
+            <a aria-hidden='true' href='#header-8'> Acute Toxicity</a>
+          </h2>
+        </header>
+        <div class='body'>
+          <ul>
+              <li><strong>Local Anaesthetic Agents:</strong> Are relatively free from side effects if administered in an appropriate dosage and in the correct anatomical location.</li>
+              <li><strong>Systemic and Localized Toxic Reactions:</strong> May occur, usually from:</li>
+              <ul>
+                  <li>Accidental Injection:</li>
+                  <ul>
+                      <li>Into blood vessels (Intravascular)</li>
+                      <li>Into the spinal canal (Intrathecal)</li>
+                  </ul>
+                  <li>Administration of an excessive dose of the local anaesthetic agent.</li>
+              </ul>
+              <li><strong>Main Concern:</strong> CNS (Central Nervous System) and Cardiac Toxicity</li>
+              <ul>
+                  <li><strong>CNS:</strong></li>
+                  <ul>
+                      <li>Early Signs:</li>
+                      <ul>
+                          <li>Lightheadedness</li>
+                          <li>Dizziness</li>
+                          <li>Circumoral Paraesthesia</li>
+                      </ul>
+                      <li>Visual and/or Auditory Disturbances:</li>
+                      <ul>
+                          <li>Difficulty focusing</li>
+                          <li>Tinnitus</li>
+                      </ul>
+                      <li>Progression:</li>
+                      <ul>
+                          <li>Anxiety &rarr; Disorientation &rarr; Drowsiness &rarr; Loss of Consciousness</li>
+                          <li>Shivering, Muscular Twitching, and Tremors &rarr; Seizures &rarr; Respiratory Arrest</li>
+                      </ul>
+                      <li>CNS Toxicity is Exacerbated by Hypercarbia and Acidosis</li>
+                  </ul>
+                  <li><strong>Cardiac:</strong></li>
+                  <ul>
+                      <li>Hypotension</li>
+                      <ul>
+                          <li>All local anaesthetics are negative inotropes</li>
+                      </ul>
+                      <li>Cardiac Arrhythmias:</li>
+                      <ul>
+                          <li>PVC &rarr; Wide QRS &rarr; Multiform V-tach &rarr; V-fib, or</li>
+                          <li>Pattern with bupivacaine</li>
+                          <li>Bradycardia &rarr; Asystole</li>
+                          <li>Pattern with bupivacaine + lidocaine</li>
+                      </ul>
+                  </ul>
+              </ul>
+              <li><strong>With Most Drugs:</strong> CNS toxicity precedes cardiac toxicity, providing a warning of impending disaster.</li>
+              <ul>
+                  <li><strong>Key Response:</strong> Maintain oxygenation and normal CO2!</li>
+              </ul>
+              <li><strong>With Bupivacaine:</strong> CNS toxicity rapidly progresses to cardiovascular collapse.</li>
+              <li><strong>Pregnancy Enhances the Risk of Cardiac Toxicity.</strong></li>
+              <li><strong>Risk of Seizure and/or Cardiovascular Collapse is Increased by:</strong></li>
+              <ul>
+                  <li>Cold Temperature (Slows Metabolism)</li>
+                  <li>Metabolic or Respiratory Acidosis</li>
+                  <li>Hypoxia</li>
+              </ul>
+          </ul>
+          
+
+          <h4>Treatment of Overdose</h4>
+          <ul>
+              <li><strong>Airway:</strong></li>
+              <ul>
+                  <li>100% oxygen</li>
+                  <li>Intubate if necessary to ventilate</li>
+              </ul>
+              <li><strong>CNS:</strong></li>
+              <ul>
+                  <li>Break seizure with propofol, thiopental, or midazolam</li>
+              </ul>
+              <li><strong>Cardiovascular:</strong></li>
+              <ul>
+                  <li>Amiodarone has demonstrated efficacy. Use 300 mg</li>
+                  <li>Lidocaine would be a particularly poor choice!</li>
+                  <li>Resuscitation difficult with bupivacaine, more frequently successful in animal studies following ropivacaine and levobupivacaine overdose.</li>
+              </ul>
+          </ul>
+
+          <h4>Neurotoxicity</h4>
+          <ul>
+              <li><strong>Chloroprocaine:</strong></li>
+              <ul>
+                  <li>Low pH and presence of metabisulfite</li>
+                  <li>Not recommended for spinal anesthesia</li>
+              </ul>
+              <li><strong>Lidocaine:</strong></li>
+              <ul>
+                  <li>Initially seen with formulation in 10% dextrose</li>
+                  <li>Now seen with all formulations</li>
+                  <li>No longer used for spinal anesthesia</li>
+              </ul>
+              <li><strong>Bupivacaine:</strong> Appears free of neurotoxicity</li>
+          </ul>
+          
+
+          <h4>Methemoglobinemia</h4>
+          <ul>
+              <li><strong>10%:</strong> Clinical anoxia</li>
+              <li><strong>60%:</strong> Stupor, coma, and death.</li>
+              <ul>
+                  <li>Documented with benzocaine, prilocaine</li>
+              </ul>
+              <li><strong>Associated with benzocaine and prilocaine</strong></li>
+              <li><strong>Treat with methylene blue:</strong></li>
+              <ul>
+                  <li>1-2 mg/kg given over 5 minutes</li>
+                  <li>Faster administration may exacerbate methemoglobinemia</li>
+              </ul>
+          </ul>
+          
+
+        </div>
+      </section>
+
+
+      <section id='header-9'>
+        <header>
+          <h2>
+            <a aria-hidden='true' href='#header-9'>Drug Interactions </a>
+          </h2>
+        </header>
+        <div class='body'>
+          <ul>
+              <li><strong>Esters:</strong></li>
+              <ul>
+                  <li>Metabolized by pseudocholinesterase</li>
+                  <ul>
+                      <li>Compete with succinylcholine for metabolism, so when given together, each lasts longer</li>
+                      <li>Metabolism slowed by administration of anticholinesterase (e.g., neostigmine)</li>
+                  </ul>
+              </ul>
+              <li><strong>Local Anaesthetic Toxicities are ADDITIVE</strong></li>
+              <ul>
+                  <li>Divide lidocaine dose by 4 to convert to bupivacaine equivalents</li>
+                  <li>Keep lidocaine/4 + bupivacaine less than 3 mg/kg</li>
+              </ul>
+          </ul>
+          
+        </div>
+      </section>
+
+
+      <section id='header-10'>
+        <header>
+          <h2>
+            <a aria-hidden='true' href='#header-10'> Dosing Guidelines (nerve block)</a>
+          </h2>
+        </header>
+        <div class='body'>
+            <!-- image here -->
+            <div class="image-container">
+              <img src="../figures/" alt="" onclick="openModal(this)">
+              <div class="caption"></div>
+            </div>
+            
+            <div id="myModal" class="modal">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <img class="modal-content" id="modalImage">
+              <div id="caption" class="caption"></div>
+            </div>
+        </div>
+      </section>
+
+
+
+      </section>
+
+      <div class="contact">
+        <hr style="margin: 3rem 0;">
+
+      
+                <div class="comment">
+        <p>Send your comments, corrections, explanations/clarifications and requests/suggestions to our <a href="https://chat.whatsapp.com/FtDdb6uEFYzBCnTnMgm2Z1">WhatsApp group</a>.</p>
+        </div>
+      </div>
+    </article>
+   </article>
+   <div style="height: 300px;"></div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+        <div>
+          <p id="popup-trigger">disclaimer</p>
+
+          <!-- The pop-up dive content -->
+          <div id="popup" class="popup">
+            <p>The content on this ‘Website’, including but not limited to text, graphics, images, videos, and other materials, should not be considered as a substitute for formal medical education or clinical training. The creators and operators of this Website make no warranties, express or implied, regarding the accuracy, currency, or completeness of the information provided on the Website. They shall not be held responsible for any errors or omissions, or for any actions taken based on the information provided on this Website.</p>
+            <button class="popup-close" onclick="closePopup()">Close</button>
+          </div>     
+          <p><a href="../about-temp2.html">about</a> </p>   
+          <p><a href="../contribute.html">contribute</a> </p>
+          <p><a href="https://chat.whatsapp.com/FtDdb6uEFYzBCnTnMgm2Z1">say hi👋</a> </p>
+        </div>
+
+        <div class="footer-beta">
+          <p>thisisatestversion</p>
+        </div>
+    </div>
+  </footer>
+<!------------  SCROLL UP ----------->
+<a href="#" class="scrollup" id="scroll-up"> 
+  <i class="ri-arrow-up-fill scrollup__icon"></i>
+</a>
+<script src="../main.js"></script>
+<script src="../modal.js"></script>
+</body>
+</html>
+ 
