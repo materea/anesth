@@ -948,6 +948,23 @@ footer p, footer span{
   background: var(--color-secondary);
 }
 
+.red-btn {
+  background: var(--color-red);
+  margin: 15px 0;
+  color:#fff;
+  border:none;
+  padding:10px 30px;
+  border-radius:20px;
+  font-weight: 500;
+  font-family: var(--font-family-primary);
+  transition:all 200ms ease-out;
+}
+
+.red-btn:hover{
+  box-shadow:0 0 0 2px var(--color-ash-dark) inset;
+  transition:none;
+}
+
 .button-homepg {
   background-color: var(--color-darker);
   border: none;
