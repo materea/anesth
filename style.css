@@ -512,7 +512,7 @@ blockquote {
 
 .contribute-cta p, .contribute-cta span{
   margin: 0;
-  font-size: 11px;
+  font-size: 0.65rem;
 }
 
 .contribute-cta span a {
@@ -563,7 +563,7 @@ blockquote {
   /* margin: 0 10%; */
 }
 .home-pg p {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 
@@ -590,7 +590,7 @@ blockquote {
 }
 
 .home-pg ul li  {
-  font-size: 13px;
+  font-size: 0.7rem;
   margin: 5px;
 }
 
@@ -612,7 +612,7 @@ blockquote {
  }
 
 .contribute { 
-  font-size: .8rem;
+  font-size: .65rem;
 }
 
 .contribute-container { 
@@ -823,7 +823,7 @@ blockquote {
   margin-top: 0;
   padding: 16px 0 16px 50px;
   border-top: 1px solid #ccc;
-  font-size: 0.8rem;
+  font-size: 0.65rem;
 }
 
 .topics ul li a{
@@ -845,7 +845,7 @@ blockquote {
   -o-transform: translate(0,-50%);
   transform: translate(0,-50%);
   left: 30px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 .topics ul li span {
@@ -919,7 +919,7 @@ padding: 0;
 }
 
 footer p, footer span{
-  font-size: 0.65rem;
+  font-size: 0.55rem;
 }
 
 
@@ -974,7 +974,7 @@ footer p, footer span{
   text-align: left;
   text-decoration: none;
   display: inline-block;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-family: var(--font-family-primary);
   margin: 4px 2px;
   cursor: pointer;
@@ -1414,7 +1414,7 @@ figcaption {
   border: 1px solid var(--color-ash);
   border-radius: 10px;
   box-sizing: border-box;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-family: var(--font-family-primary);
 }
 

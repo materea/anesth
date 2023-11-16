@@ -9,6 +9,16 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../notes.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var lastModified = document.lastModified;
+      var modifiedElement = document.getElementById('last-modified');
+
+      if (modifiedElement) {
+        modifiedElement.innerHTML = 'Last modified: ' + lastModified;
+      }
+    });
+  </script>
 </head>
 <body>
   <input type="checkbox" id="main-navigation-toggle" class="btn btn--close" title="Toggle main navigation" />
@@ -50,6 +60,8 @@
     </div>
 
     <h1>Introduction to Anaesthesia</h1>
+    <div id="last-modified" style="font-size: 0.5rem;"></div>
+
   
     <!-- <div class="author-flex">
       <div class="author-img">
@@ -76,16 +88,6 @@
         <div id="tableOfContents">
             <ol id="tocList"></ol>
         </div>
-        <!-- <ol>
-          <li><a href="#header-1">Definition</a></li>
-          <li><a href="#header-2">Historical Landmarks</a></li>
-          <li><a href="#header-3">Practice of Anaesthesia</a></li>
-          <li><a href="#header-4">Types of Anaesthesia</a></li>
-          <li><a href="#header-5">History of Anaesthesia</a></li>
-          <li><a href="#header-6">Neuromuscular Blocking Drugs</a></li>
-          <li><a href="#header-7">Local Anaesthetics</a></li>
-          <li><a href="#header-8">Components of General Anaesthesia</a></li>
-       </ol> -->
       </div>
      <div>
 
