@@ -1418,7 +1418,43 @@ figcaption {
   font-family: var(--font-family-primary);
 }
 
+#content {
+  display: none;
+  position: absolute;
+  width: 60%;
+  top: 47%; /*to position below the search box */
+  left: auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  max-height: 200px; /* to set a max height for the results container */
+  overflow-y: auto; /* to enable scrolling if results exceed the max height */
+  padding: 10px;
+  z-index: 999;
+  text-align: left;
+}
 
+#content p {
+  font-style: italic;
+  color: var(--color-ash-dark);
+  font-size: 0.7rem;
+}
+
+#content li {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#content a {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 0.7rem;
+}
+
+#content a:hover {
+  text-decoration: underline;
+}
 
 
 
@@ -1665,6 +1701,26 @@ body.dark-mode {
   color: var(--color-darker-dark);
   margin-bottom: 20px;
 }
+
+.dark-mode #content {
+  background-color: var(--color-secondary-dark);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+.dark-mode #content p {
+  color: var(--color-secondary);
+}
+
+
+
+.dark-mode #content a {
+  color: var(--color-darker-dark);
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 0.7rem;
+}
+
 
 .dark-mode .topics ul li a{
   color: var(--color-darker-dark);

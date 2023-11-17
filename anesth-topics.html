@@ -130,7 +130,45 @@
 <a href="#" class="scrollup" id="scroll-up"> 
   <i class="ri-arrow-up-fill scrollup__icon"></i>
 </a>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var searchInput = document.getElementById('searchInput');
+    var contentContainer = document.getElementById('content');
+    var topicList = document.querySelectorAll('.topics-container ul li');
+
+    searchInput.addEventListener('input', function () {
+      var searchTerm = searchInput.value.toLowerCase();
+      var matchingItems = [];
+
+      topicList.forEach(function (item) {
+        var topicTitle = item.textContent.toLowerCase();
+        if (topicTitle.includes(searchTerm)) {
+          matchingItems.push(item.outerHTML);
+        }
+      });
+
+      if (matchingItems.length > 0) {
+        contentContainer.innerHTML = matchingItems.join('');
+        contentContainer.style.display = 'block';
+      } else {
+        contentContainer.innerHTML = '<p>We do not have this one yet.</p>';
+        contentContainer.style.display = 'block';
+      }
+    });
+
+    // Hide content when clicking outside the search box
+    document.addEventListener('click', function (event) {
+      var isClickInsideSearchBox = searchInput.contains(event.target);
+      var isClickInsideContent = contentContainer.contains(event.target);
+
+      if (!isClickInsideSearchBox && !isClickInsideContent) {
+        contentContainer.style.display = 'none';
+      }
+    });
+  });
+</script>
+
 <script src="main.js"></script>
-<script src="search.js"></script>
 </body>
 </html>
