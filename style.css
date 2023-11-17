@@ -118,7 +118,7 @@ blockquote {
 }
 
 .course-description-text p{
-  font-size: 0.8rem;
+  font-size: 0.65rem;
   line-height: 1.5;
 }
 
@@ -935,6 +935,7 @@ footer p, footer span{
   border-radius:20px;
   font-weight: 500;
   font-family: var(--font-family-primary);
+  font-size: 0.7rem;
   transition:all 200ms ease-out;
 }
 
@@ -957,6 +958,7 @@ footer p, footer span{
   border-radius:20px;
   font-weight: 500;
   font-family: var(--font-family-primary);
+  font-size: 0.7rem;
   transition:all 200ms ease-out;
 }
 

@@ -9,6 +9,19 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../notes.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var lastModified = new Date(document.lastModified);
+      var options = { year: 'numeric', month: 'long', day: 'numeric' };
+      var formattedDate = lastModified.toLocaleDateString(undefined, options);
+
+      var modifiedElement = document.getElementById('last-modified');
+
+      if (modifiedElement) {
+        modifiedElement.innerHTML = 'Last modified: ' + formattedDate;
+      }
+    });
+  </script>
 </head>
 <body>
   <input type="checkbox" id="main-navigation-toggle" class="btn btn--close" title="Toggle main navigation" />
@@ -51,15 +64,8 @@
 
     <h1>Muscle Relaxants - Neuromuscular Blocking Drugs</h1>
   
-    <!-- <div class="author-flex">
-      <div class="author-img">
-        <img  src="/contributors/vt1.jpeg" alt="">
-      </div>
-      <div>
-        <h2 class="name">Compiled by Victortayo</h2>
-        <p class="updated">last updated</p>
-      </div>
-    </div> -->
+    <div id="last-modified" style="font-size: 0.5rem; color: #0f9f85;"></div>
+
 
     <article class="notes">
         <a id='top'></a>
@@ -76,34 +82,6 @@
         <div id="tableOfContents">
           <ol id="tocList"></ol>
       </div>
-
-        <!-- <ol>
-          <li><a href="#header-1">Anatomy of the NMJ</a></li>
-          <li><a href="#header-2">Physiology of Neuromuscular Transmission</a></li>
-          <li><a href="#header-3">Factors Affecting Neuromuscular Transmission</a></li>
-          <li><a href="#header-4">Characteristics of Ideal Muscle Relaxant</a></li>
-          <li><a href="#header-5">Clasifications</a></li>
-          <li><a href="#header-6">Assessment of neuromuscular transmission</a></li>
-          <li><a href="#header-7">Muscle Relaxant Examples</a></li>
-          <ul>
-            <li><a href="#heading-7-1">SUXAMETHONIUM</a></li>
-            <li><a href="#heading-7-2">D- TUBOCURARINE</a></li>
-            <li><a href="#heading-7-3">PANCURONIUM</a></li>
-            <li><a href="#heading-7-4">GALLAMINE</a></li>
-            <li><a href="#heading-7-5">ATRACURIUM</a></li>
-            <li><a href="#heading-7-6">CIS-ATRACURIUM</a></li>
-            <li><a href="#heading-7-7">MIVACURIUM</a></li>
-            <li><a href="#heading-7-8">VECURONIUM</a></li>
-            <li><a href="#heading-7-9">ROCURONIUM</a></li>
-            <li><a href="#heading-7-10">ALCURONIUM</a></li>
-            <li><a href="#heading-7-11">DOXACURIUM</a></li>
-            <li><a href="#heading-7-12">METOCURINE</a></li>
-            <li><a href="#heading-7-13">PIPECURONIUM</a></li>
-
-        </ul>
-          <li><a href="#header-8">Reversal of NMB</a></li>
-
-       </ol> -->
       </div>
      <div>
 
