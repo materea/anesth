@@ -1428,16 +1428,26 @@ figcaption {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   max-height: 200px; /* to set a max height for the results container */
-  overflow-y: auto; /* to enable scrolling if results exceed the max height */
-  padding: 10px;
+  overflow-y: auto; /* Enable vertical scrollbar if needed */
+  scrollbar-width: thin; /* Set the width of the scrollbar (works in Firefox) */
+  scrollbar-color: transparent transparent; /* Set the color of the scrollbar (works in Firefox) */  padding: 10px;
   z-index: 999;
   text-align: left;
+}
+
+#content::-webkit-scrollbar {
+  width: 5px; /* Set the width of the scrollbar (works in WebKit browsers like Chrome and Safari) */
+}
+
+#content::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Set the color of the scrollbar thumb (works in WebKit browsers) */
 }
 
 #content p {
   font-style: italic;
   color: var(--color-ash-dark);
   font-size: 0.7rem;
+  line-height: 1.3;
 }
 
 #content li {
