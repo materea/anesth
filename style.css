@@ -45,7 +45,8 @@ h1 {
 }
 
 p {
-  line-height: 1.4;
+  font-size: .75rem;
+  line-height: 1.5;
 }
 
 
@@ -65,11 +66,11 @@ p {
 #checkBtn2:checked ~ #listing2 {
   display: block;
 }
-.history a, .before-history a, .basic-section a {
-  background-color: var(--color-darker);
-  color: var(--color-primary);
-  text-decoration: underline;
-  text-decoration-style: dotted;  
+.basic-section a {
+  /* background-color: var(--color-darker); */
+  /* color: var(--color-primary); */
+  /* text-decoration: underline; */
+  /* text-decoration-style: dotted;   */
   padding: 2px 4px;
 }
 
@@ -102,7 +103,7 @@ blockquote {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto;
-  max-width: 60rem;
+  max-width: 50rem;
   padding: 1.5rem;
 }
 
@@ -733,82 +734,8 @@ blockquote {
 
 }
 
-/* hx page  */
 
-.story p {
-  margin: 0 0 13px 0;
-}
 
-.history {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-gap: 1em;
-  position: relative;
-  margin-bottom: 20px;
-}
-.history h4 {
-  text-decoration: underline;
-  text-decoration-style: dotted;
-}
-
-.history__title {
-  font-size: 3vw;
-  font-weight: 600;
-  padding: 20px 0px;
-  position: sticky;
-  top: 100px;
-  text-align: left;
-  height: calc(3vw + 20px);
-  transition: all 0.2s ease-in;
-}
-
-.history__content {
-  border-top: 2px solid var(--color-darker);
-  padding: 15px 0;
-}
-
-.history__content {
-  font-weight: 400
-}
-
-.history__content .story {
-  line-height: 26px;
-}
-
-@media (min-width: 1150px) {
-  .history__title {
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 576px) {
-  .history__content .story {
-    font-size: 13px;
-  }
-
-  .history {
-    display: block;
-    position: relative;
-  }
-
-  .history__title {
-    font-size: 4.2vw;
-    font-weight: 600;
-    padding: 5px 5px;
-    position: sticky;
-    top: 70px;
-    text-align: left;
-    height: calc(3vw + 20px);
-    transition: all 0.2s ease-in;
-    background-color: var(--color-primary);
-    color: var(--color-primary);
-    margin-bottom: 10px;
-  }
-
-  .block-effect {
-    font-size: calc(8px + 8vw);
-  }
-}
 
 /* topics page */
 
@@ -997,14 +924,14 @@ footer p, footer span{
 .download-button {
   height: 2em;
   display: inline-block;
-  border: 3px solid var(--color-darker);
-  font-size: 1em;
-  font-weight: 500;
+  font-size: 0.8em;
+  font-weight: normal;
+  border-radius: 14px;
   text-align: center;
   text-decoration: none;
-  color: var(--color-darker);
   overflow: hidden;
-  float: right;
+  background-color: var(--color-red);
+  
 }
 
 .download-button .icon {
@@ -1015,16 +942,23 @@ footer p, footer span{
 .download-button .download-primary,
 .download-button .download-secondary {
   display: block;
-  padding: 0 2em;
+  padding: 0 1em;
   line-height: 2em;
   -webkit-transition: margin .4s;
   transition: margin .4s;
+  border-radius: 20px;
+
 }
 
 .download-button .download-primary {
-  background-color: var(--color-darker);
+  background-color: var(--color-red);
   color: var(--color-primary);
 }
+
+.download-button .download-secondary {
+  color: var(--color-primary);
+}
+
 
 .download-button:hover .download-primary {
   margin-top: -2em;
@@ -1127,14 +1061,7 @@ iframe {
 
 
 
-@media (min-width: 1040px) {
-  .page-container {
-    box-shadow: -40px 0px 80px -80px var(--color-darker), 40px 0px 80px -80px var(--color-darker);
-    padding: 3rem;
-  }
 
- 
-}
 
 
 .page-header {
@@ -1395,6 +1322,7 @@ iframe {
 .pdf-embed iframe{
   width: 100%;
   margin: auto;
+  border: none;
 }
 
 figcaption {
@@ -1425,7 +1353,8 @@ figcaption {
   position: absolute;
   width: 60%;
   top: 47%; /*to position below the search box */
-  left: auto;
+  left: 20%;
+  right: 20%;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -1761,4 +1690,31 @@ body.dark-mode {
   background-color: var(--color-primary-dark);
   padding: 10px;
   border-radius: 7px;
+}
+
+@media (min-width: 1040px) {
+  .page-container {
+    box-shadow: -40px 0px 80px -80px var(--color-darker), 40px 0px 80px -80px var(--color-darker);
+    padding: 3rem;
+  }
+
+  .dark-mode   .page-container {
+    box-shadow: -40px 0px 80px -80px var(--color-ash), 40px 0px 80px -80px var(--color-ash);
+    padding: 3rem;
+  }
+
+  .button-homepg {
+
+    width: 50%;
+    margin-right: 20%;
+    margin-left: 20%;
+  
+  }
+  
+  .popup {
+    width: 60%;
+    
+  }
+  
+ 
 }
