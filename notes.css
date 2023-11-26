@@ -10,6 +10,8 @@
   --color-ash: #747474;
   --font-family-primary: 'Poppins', sans-serif;
   --font-family-secondary: 'Rubik Mono One', sans-serif;
+  --font-family-tertiary: 'Georgia', sans-serif;
+  --font-family-tertiary: 'Georgia', sans-serif;
   --td: 150ms;
   --te: cubic-bezier(0.215, 0.61, 0.355, 1);
 
@@ -104,6 +106,10 @@ html {
     line-height: 1.3;
   }
 
+  #last-modified {
+    font-family: var(--font-family-tertiary);
+  }
+ 
   #top {
     background-color: var(--color-primary);
     margin: 0;
