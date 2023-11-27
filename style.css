@@ -784,6 +784,7 @@ blockquote {
 
 .topics h3 {
   margin-left: 10px;
+  text-align: center;
 }
 
 .topic-group {
@@ -791,7 +792,9 @@ blockquote {
   color: #fff;
   padding: 10px;
   border-radius: 10px;
+  text-align: center;
 }
+
 
 .dotted-underline {
   text-decoration: underline;

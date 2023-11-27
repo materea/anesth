@@ -136,6 +136,8 @@
     var topicList = document.querySelectorAll('.topics-container ul li');
 
     searchInput.addEventListener('input', function () {
+      positionResultsContainer(); // Update position when input changes
+
       var searchTerm = searchInput.value.toLowerCase();
       var matchingItems = [];
 
@@ -150,12 +152,17 @@
         contentContainer.innerHTML = matchingItems.join('');
         contentContainer.style.display = 'block';
       } else {
-        contentContainer.innerHTML = '<p>We do not have this one yet scholar🙄</p>';
+        contentContainer.innerHTML = '<p>We do not have this one yet.</p>';
         contentContainer.style.display = 'block';
       }
     });
 
-    // Hide content when clicking outside the search box
+    // Update position when search box is clicked
+    searchInput.addEventListener('click', function () {
+      positionResultsContainer();
+    });
+
+    // Hide content when clicking outside the search box or results
     document.addEventListener('click', function (event) {
       var isClickInsideSearchBox = searchInput.contains(event.target);
       var isClickInsideContent = contentContainer.contains(event.target);
@@ -164,6 +171,14 @@
         contentContainer.style.display = 'none';
       }
     });
+
+    // Function to position the results container
+    function positionResultsContainer() {
+      var searchBoxRect = searchInput.getBoundingClientRect();
+      contentContainer.style.position = 'absolute';
+      contentContainer.style.top = searchBoxRect.bottom + 'px';
+      contentContainer.style.left = searchBoxRect.left + 'px';
+    }
   });
 </script>
 
