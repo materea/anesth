@@ -386,6 +386,22 @@ table {
   bottom: 3%;
 }
 
+#progress-container {
+  height: 5px;
+  background-color: var(--color-ash);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: var(--color-secondary);
+  border-radius: 0 5px 5px 0;;
+}
+
 
 /* Dark Mode Styles */
 body.dark-mode {
@@ -451,3 +467,4 @@ body.dark-mode {
   padding: 5px;
   font-size: 0.6rem;
 }
+

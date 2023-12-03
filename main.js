@@ -1,4 +1,22 @@
-/*----------  SHOW SCROLL UP ---------*/ 
+
+// Function to toggle dark mode
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle("dark-mode");
+}
+
+// Event listener for the toggle switch
+const darkModeToggle = document.getElementById("dark-mode-toggle-checkbox");
+darkModeToggle.addEventListener("change", toggleDarkMode);
+
+// Check the user's preferred color scheme and set initial state
+const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+if (prefersDarkMode) {
+    darkModeToggle.checked = true;
+    toggleDarkMode();
+}
+
+// Scroll up
 function scrollUp(){
     const scrollUp = document.getElementById('scroll-up');
     // When the scroll is higher than 400 viewport height, add the show-scroll class to the a tag with the scroll-top class
@@ -24,68 +42,51 @@ var trigger = document.getElementById("popup-trigger");
 trigger.addEventListener("click", showPopup);
 
 
-// Function to toggle dark mode
-function toggleDarkMode() {
-    const body = document.body;
-    body.classList.toggle("dark-mode");
-}
 
-// Event listener for the toggle switch
-const darkModeToggle = document.getElementById("dark-mode-toggle-checkbox");
-darkModeToggle.addEventListener("change", toggleDarkMode);
+       // Function to generate dynamic Table of Contents
+       function generateTableOfContents() {
+        // Select all sections with 'id' attribute starting with 'header-' or 'heading-'
+        var sections = document.querySelectorAll('[id^="header-"], [id^="heading-"]');
+        
+        // Select the ol element to append TOC items
+        var tocList = document.getElementById('tocList');
 
-// Check the user's preferred color scheme and set initial state
-const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-if (prefersDarkMode) {
-    darkModeToggle.checked = true;
-    toggleDarkMode();
-}
+        var currentList = tocList;
+        var currentLevel = 1;
 
+        sections.forEach(function(section, index) {
+            // Get the header text (h2, h3, or h4) within the section
+            var headerText = section.querySelector('header h2, header h3, header h4').textContent;
 
- // Function to generate dynamic Table of Contents
- function generateTableOfContents() {
-    // Select all sections with 'id' attribute starting with 'header-'
-    var sections = document.querySelectorAll('[id^="header-"]');
-    
-    // Select the ul element to append TOC items
-    var tocList = document.getElementById('tocList');
+            // Determine the heading level
+            var headingLevel = parseInt(section.tagName.charAt(1), 10);
 
-    var currentList = tocList;
+            // Create a list item with a link to the section
+            var listItem = document.createElement('li');
+            var link = document.createElement('a');
+            link.href = '#' + section.id;
+            link.textContent = headerText;
+            listItem.appendChild(link);
 
-    sections.forEach(function(section, index) {
-        // Get the header text (h2 or h3) within the section
-        var headerText = section.querySelector('header h2').textContent;
+            // Check if the heading level has increased
+            if (headingLevel > currentLevel) {
+                // Create a sublist for the increased heading level
+                var sublist = document.createElement('ol');
+                currentList.lastElementChild.appendChild(sublist);
+                currentList = sublist;
+                currentLevel = headingLevel;
+            } else if (headingLevel < currentLevel) {
+                // Move back to the higher level list
+                for (var i = headingLevel; i < currentLevel; i++) {
+                    currentList = currentList.parentElement.parentElement;
+                }
+                currentLevel = headingLevel;
+            }
 
-        // Create a list item with a link to the section
-        var listItem = document.createElement('li');
-        var link = document.createElement('a');
-        link.href = '#' + section.id;
-        link.textContent = headerText;
-        listItem.appendChild(link);
+            // Append the list item to the Table of Contents
+            currentList.appendChild(listItem);
+        });
+    }
 
-        // Check if the section has a nested section (second level)
-        var nestedSections = section.querySelectorAll('section');
-        if (nestedSections.length > 0) {
-            // Create a sublist for second-level headers
-            var sublist = document.createElement('ul');
-
-            nestedSections.forEach(function(nestedSection) {
-                var nestedHeader = nestedSection.querySelector('header h3').textContent;
-                var nestedListItem = document.createElement('li');
-                var nestedLink = document.createElement('a');
-                nestedLink.href = '#' + nestedSection.id;
-                nestedLink.textContent = nestedHeader;
-                nestedListItem.appendChild(nestedLink);
-                sublist.appendChild(nestedListItem);
-            });
-
-            listItem.appendChild(sublist);
-        }
-
-        // Append the list item to the Table of Contents
-        tocList.appendChild(listItem);
-    });
-}
-
-// Call the function to generate Table of Contents
-generateTableOfContents();
+    // Call the function to generate Table of Contents
+    generateTableOfContents();

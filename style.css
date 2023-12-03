@@ -1017,8 +1017,8 @@ img {
 
 /*------------- SCROLL BAR ----------*/
 ::-webkit-scrollbar{
-  width: .6rem;
-  background: var(--color-darker);
+  width: .5rem;
+  background: var(--color-ash);
 }
 
 ::-webkit-scrollbar-thumb{
