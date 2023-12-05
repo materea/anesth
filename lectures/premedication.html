@@ -9,19 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../notes.css">
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var lastModified = new Date(document.lastModified);
-      var options = { year: 'numeric', month: 'long', day: 'numeric' };
-      var formattedDate = lastModified.toLocaleDateString(undefined, options);
 
-      var modifiedElement = document.getElementById('last-modified');
-
-      if (modifiedElement) {
-        modifiedElement.innerHTML = 'Last modified: ' + formattedDate;
-      }
-    });
-  </script>
 </head>
 <body>
   <input type="checkbox" id="main-navigation-toggle" class="btn btn--close" title="Toggle main navigation" />
@@ -64,7 +52,6 @@
 
     <h1>Premedication and Drugs Used for Premedication</h1>
   
-    <div id="last-modified" style="font-size: 0.5rem; color: #0f9f85;"></div>
 
 
     <article class="notes">

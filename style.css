@@ -1017,13 +1017,13 @@ img {
 
 /*------------- SCROLL BAR ----------*/
 ::-webkit-scrollbar{
-  width: .5rem;
-  background: var(--color-ash);
+  width: .45rem;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb{
   background: var(--color-secondary);
-  border-radius: .5rem;
+  border-radius: .45rem;
 }
 
 /*-----------  SCROLL UP -----------*/
@@ -1063,7 +1063,18 @@ iframe {
 
 
 
+.icon-box {
+margin-left: 0;
+margin-bottom: 0;
+margin-top: .6rem;
+padding: 0;
+}
 
+/* Style for the icon */
+.icon {
+  width: 24px; /* Set the width of the icon */
+  height: 24px; /* Set the height of the icon */
+}
 
 
 

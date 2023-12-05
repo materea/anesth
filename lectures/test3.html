@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Question Card</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      width: 300px;
+      max-width: 100%;
+      margin: 20px;
+    }
+
+    .card-header {
+      background-color: #3498db;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .question {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .options {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .options li {
+      margin-bottom: 10px;
+    }
+
+    .option {
+      display: flex;
+      align-items: center;
+    }
+
+    .radio-input {
+      margin-right: 10px;
+    }
+
+    .submit-btn, .next-btn {
+      background-color: #2ecc71;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .next-btn {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card" id="questionCard">
+  <div class="card-header">
+    Practice Question
+  </div>
+  <div class="card-body">
+    <div class="question" id="question1">
+      What is the capital of France?
+    </div>
+    <ul class="options" id="options1">
+      <li class="option">
+        <input type="radio" name="answer1" class="radio-input" id="option1">
+        <label for="option1">Paris</label>
+      </li>
+      <li class="option">
+        <input type="radio" name="answer1" class="radio-input" id="option2">
+        <label for="option2">Berlin</label>
+      </li>
+      <li class="option">
+        <input type="radio" name="answer1" class="radio-input" id="option3">
+        <label for="option3">London</label>
+      </li>
+      <li class="option">
+        <input type="radio" name="answer1" class="radio-input" id="option4">
+        <label for="option4">Madrid</label>
+      </li>
+    </ul>
+    <button class="submit-btn" onclick="showNextQuestion()">Submit</button>
+    <button class="next-btn" onclick="showNextQuestion()">Next</button>
+  </div>
+</div>
+
+<script>
+  let currentQuestion = 1;
+
+  function showNextQuestion() {
+    document.getElementById(`question${currentQuestion}`).style.display = 'none';
+    document.getElementById(`options${currentQuestion}`).style.display = 'none';
+
+    currentQuestion++;
+
+    if (currentQuestion <= totalQuestions) {
+      document.getElementById(`question${currentQuestion}`).style.display = 'block';
+      document.getElementById(`options${currentQuestion}`).style.display = 'block';
+    } else {
+      // If all questions are answered, you can redirect to a results page or perform any other action.
+      alert('All questions answered!');
+    }
+
+    // Hide the submit button and show the next button after the first question
+    document.querySelector('.submit-btn').style.display = 'none';
+    document.querySelector('.next-btn').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>

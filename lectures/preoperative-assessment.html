@@ -9,19 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../notes.css">
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var lastModified = new Date(document.lastModified);
-      var options = { year: 'numeric', month: 'long', day: 'numeric' };
-      var formattedDate = lastModified.toLocaleDateString(undefined, options);
 
-      var modifiedElement = document.getElementById('last-modified');
-
-      if (modifiedElement) {
-        modifiedElement.innerHTML = 'Last modified: ' + formattedDate;
-      }
-    });
-  </script>
 </head>
 <body>
   <input type="checkbox" id="main-navigation-toggle" class="btn btn--close" title="Toggle main navigation" />
@@ -69,8 +57,6 @@
 
     <h1>Preoperative Assessment and Preparation</h1>
   
-    <div id="last-modified" style="font-size: 0.5rem; color: #0f9f85;"></div>
-
 
     <article class="notes">
         <a id='top'></a>
@@ -80,10 +66,14 @@
     <div class="outline2">
 
       <input type="radio" name="control-2" id="show-2">
-      <label for="show-2">Show Outline</label>
+      <label for="show-2">🐵&nbsp; &nbsp;Show Outline</label>
       <input type="radio" name="control-2" id="hide-2">
-      <label for="hide-2">Hide Outline</label>
+      <label for="hide-2">🙈&nbsp; &nbsp; Hide Outline</label>
       <div class="contents">
+        <div class="icon-box">
+          <!-- Replace 'path/to/your/icon.png' with the actual path to your PNG icon -->
+          <img src="../images/icons/book.png" alt="Icon" class="icon">
+        </div>
         <div id="tableOfContents">
             <ol id="tocList"></ol>
         </div>

@@ -43,50 +43,60 @@ trigger.addEventListener("click", showPopup);
 
 
 
-       // Function to generate dynamic Table of Contents
-       function generateTableOfContents() {
-        // Select all sections with 'id' attribute starting with 'header-' or 'heading-'
-        var sections = document.querySelectorAll('[id^="header-"], [id^="heading-"]');
-        
-        // Select the ol element to append TOC items
-        var tocList = document.getElementById('tocList');
+// Function to generate dynamic Table of Contents
+document.addEventListener('DOMContentLoaded', function () {
+    // Select the main table of contents container
+    var tocContainer = document.getElementById('tableOfContents');
 
-        var currentList = tocList;
-        var currentLevel = 1;
+    // Select all Level 1 (h2) headings within the table of contents
+    var level1Headings = document.querySelectorAll('[id^="header-"] h2');
 
-        sections.forEach(function(section, index) {
-            // Get the header text (h2, h3, or h4) within the section
-            var headerText = section.querySelector('header h2, header h3, header h4').textContent;
+    level1Headings.forEach(function (level1Heading, sectionIndex) {
+        // Create a list item for the section heading
+        var sectionListItem = document.createElement('li');
+        var sectionNumber = sectionIndex + 1;
 
-            // Determine the heading level
-            var headingLevel = parseInt(section.tagName.charAt(1), 10);
+        // Create an anchor tag for the Level 1 heading
+        var sectionLink = document.createElement('a');
+        sectionLink.href = '#header-' + sectionNumber;
+        sectionLink.textContent = sectionNumber + '. ' + level1Heading.textContent;
 
-            // Create a list item with a link to the section
-            var listItem = document.createElement('li');
-            var link = document.createElement('a');
-            link.href = '#' + section.id;
-            link.textContent = headerText;
-            listItem.appendChild(link);
+        // Append the anchor tag to the list item
+        sectionListItem.appendChild(sectionLink);
 
-            // Check if the heading level has increased
-            if (headingLevel > currentLevel) {
-                // Create a sublist for the increased heading level
-                var sublist = document.createElement('ol');
-                currentList.lastElementChild.appendChild(sublist);
-                currentList = sublist;
-                currentLevel = headingLevel;
-            } else if (headingLevel < currentLevel) {
-                // Move back to the higher level list
-                for (var i = headingLevel; i < currentLevel; i++) {
-                    currentList = currentList.parentElement.parentElement;
-                }
-                currentLevel = headingLevel;
-            }
+        // Select all Level 2 (h3) headings within the current Level 1 heading's section
+        var level2Headings = level1Heading.closest('section').querySelectorAll('h3');
 
-            // Append the list item to the Table of Contents
-            currentList.appendChild(listItem);
-        });
-    }
+        if (level2Headings.length > 0) {
+            // Create an ordered list for Level 2 headings
+            var level2List = document.createElement('ol');
 
-    // Call the function to generate Table of Contents
-    generateTableOfContents();
+            level2Headings.forEach(function (level2Heading, level2Index) {
+                // Create a list item for each Level 2 heading
+                var level2ListItem = document.createElement('li');
+                var level2Number = sectionNumber + '.' + (level2Index + 1);
+
+                // Create an anchor tag for the Level 2 heading
+                var level2Link = document.createElement('a');
+                level2Link.href = '#heading-' + sectionNumber + '-' + (level2Index + 1);
+                level2Link.textContent = level2Number + ' ' + level2Heading.textContent;
+
+                // Append the anchor tag to the Level 2 list item
+                level2ListItem.appendChild(level2Link);
+
+                // Append the Level 2 list item to the Level 2 list
+                level2List.appendChild(level2ListItem);
+            });
+
+            // Append the Level 2 list to the main table of contents container
+            sectionListItem.appendChild(level2List);
+        }
+
+        // Append the section's list item to the main table of contents container
+        tocContainer.appendChild(sectionListItem);
+    });
+           // Add a class to the main table of contents container for styling
+           tocContainer.classList.add('custom-toc');
+});
+
+

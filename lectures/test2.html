@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expandable Card</title>
+    <style>
+        .card {
+            width: 300px;
+            border: 1px solid #ccc;
+            margin: 20px;
+            padding: 20px;
+            transition: height 0.3s;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #ccc; /* Add a border below the title */
+            padding-bottom: 10px; /* Add padding to separate the title and the line */
+            margin-bottom: 10px; /* Add margin to separate the line and the content */
+        }
+
+        .content {
+            display: none;
+        }
+
+        .read-more-btn {
+            cursor: pointer;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card" id="myCard">
+    <div class="icon-box">
+        <!-- Replace 'path/to/your/icon.png' with the actual path to your PNG icon -->
+        <img src="../images/icons/lightbulb.png" alt="Icon" class="icon">
+      </div>
+    <h2>What you should understand</h2>
+    <div class="content">
+        <p>This content is not available yet.</p>
+    </div>
+    <p class="read-more-btn" onclick="toggleCard()">Read More</p>
+</div>
+
+<script>
+    function toggleCard() {
+        var card = document.getElementById('myCard');
+        var content = card.querySelector('.content');
+        var btn = card.querySelector('.read-more-btn');
+
+        if (content.style.display === 'none') {
+            content.style.display = 'block';
+            card.style.height = 'auto'; // Expand the card
+            btn.innerHTML = 'Read Less';
+        } else {
+            content.style.display = 'none';
+            card.style.height = '110px'; // Set a specific height or adjust as needed
+            btn.innerHTML = 'Read More';
+        }
+    }
+</script>
+
+</body>
+</html>

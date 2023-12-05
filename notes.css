@@ -137,6 +137,35 @@ html {
 
 /*                    new outline                   */
 
+/* Style for the custom table of contents */
+.custom-toc {
+  list-style: none;
+}
+
+/* Style for Level 2 (h3) headings */
+.custom-toc > li > ol > li {
+  list-style: none; /* Hide Level 2 ordered list markers */
+}
+
+/* Style for Level 3 (h4) headings */
+.custom-toc > li > ol > li > ol > li {
+  list-style: none; /* Hide Level 3 ordered list markers */
+}
+
+.custom-toc a {
+  text-decoration: none;
+  position: relative;
+}
+
+/* Dotted underline for the links */
+.custom-toc a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px dotted ; 
+}
 
 .outline2 input[name^=control], .contents {
   position: absolute;
@@ -145,7 +174,7 @@ html {
   height: 1px;
   width: 1px;
   margin: -1px;
-  padding: 0 10px;
+  padding: 0 20px;
   border: 0;
 }
 
@@ -216,6 +245,9 @@ html {
 .outline2 input[id^=hide]:focus + label {
   background: var(--color-secondary);
 }
+
+
+
 
 
 /*                end of new outline               */
@@ -388,7 +420,7 @@ table {
 
 #progress-container {
   height: 5px;
-  background-color: var(--color-ash);
+  background-color: transparent;
   position: fixed;
   top: 0;
   width: 100%;

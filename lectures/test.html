@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.page-content {
+  padding: 20px;
+}
+
+/* Summary Card Styles */
+.summary-card {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.summary-header {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.summary-content {
+  max-height: 300px; /* Adjust the maximum height as needed */
+  overflow-y: auto;  
+}
+
+/* Summary Trigger Styles */
+.summary-trigger {
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Summary Card -->
+  <div class="summary-card" id="summaryCard">
+    <div class="summary-header">
+      <h3>Article Summary</h3>
+    </div>
+    <div class="summary-content">
+      <!-- Summary content goes here -->
+      <p>This is the summary of the article.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet molestias cupiditate modi placeat accusantium temporibus eaque pariatur fugit praesentium possimus vero, non nostrum, necessitatibus quasi nisi velit officia commodi maxime! Tempore reprehenderit exercitationem quasi dolore iusto autem tempora! Aspernatur veritatis ullam ex tempore voluptatum quae perspiciatis optio eaque temporibus necessitatibus!</p>
+      <span class="close-btn" id="closeBtn">close</span>
+    </div>
+  </div>
+
+  <!-- Your Website Content -->
+  <div class="page-content">
+    <h1>Your Page Content</h1>
+    <div class="summary-trigger" id="summaryTrigger">
+        <p>Click here to view summary</p>
+      </div>
+    <!-- Other page content goes here -->
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate tempore provident accusamus explicabo ut alias a aspernatur accusantium ab vero? Saepe eos aperiam aliquid nam, fugit non quidem porro similique doloremque officiis qui obcaecati dolorum commodi voluptatum at voluptates neque accusantium vel distinctio totam! Quam sint tempore obcaecati iure aperiam commodi odit quis id similique. Excepturi nesciunt adipisci quasi dignissimos a laboriosam illum eius obcaecati ab eum culpa aliquid voluptas autem quos molestiae praesentium, perferendis blanditiis repellendus reprehenderit qui voluptatem cumque. Eligendi laborum, maxime eaque perferendis molestiae, aperiam doloribus odit dicta officiis quaerat cum non molestias? Optio magnam ea molestiae.</p>
+    <!-- Summary Card Trigger -->
+
+  </div>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Show summary card on trigger click
+  document.getElementById("summaryTrigger").addEventListener("click", function () {
+    document.getElementById("summaryCard").style.display = "block";
+  });
+
+  // Hide summary card on close button click
+  document.getElementById("closeBtn").addEventListener("click", function () {
+    document.getElementById("summaryCard").style.display = "none";
+  });
+
+  // Hide summary card on outside click
+  document.addEventListener("mouseup", function (e) {
+    var summaryCard = document.getElementById("summaryCard");
+    if (!summaryCard.contains(e.target)) {
+      summaryCard.style.display = "none";
+    }
+  });
+});
+
+  </script>
+</body>
+</html>
