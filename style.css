@@ -922,6 +922,73 @@ footer p, footer span{
   outline:none;
 }
 
+.objectives-card {
+  border: 1px solid var(--color-darker-dark);
+  border-radius: 8px;
+  padding: 20px;
+  margin-left: 0;
+  margin-bottom: 1rem;
+  width: 90%;
+  background-color: var(--color-darker-dark);
+}
+
+
+.objectives-card .title h2{
+  font-size: .8rem;
+  font-weight: bold;
+  border-bottom: 1px solid var(--color-ash-dark);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.objectives-card .line p{
+  margin-bottom: 10px;
+  font-size: .6rem;
+}
+
+.objectives-card .content{
+  display: none;
+}
+
+.objectives-card .content p{
+  font-size: .6rem;
+}
+
+.objectives-card .read-more {
+  display: inline-block;
+  cursor: pointer;
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+  padding: 4px 8px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: .55rem;
+}
+
+.objectives-card .read-more:hover {
+  background-color: var(--color-darker);
+}
+
+.objectives-card .read-more:active {
+  background-color: var(--color-darker);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .objectives-card {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .objectives-card .title h2{
+    font-size: .8rem;
+  }
+}
+
 
 /* downloads */
 .download-button {

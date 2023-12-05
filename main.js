@@ -100,3 +100,17 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// Reading Objectives
+function toggleContent() {
+    var content = document.querySelector('.objectives-card .content');
+    var readMoreButton = document.querySelector('.objectives-card .read-more');
+
+    if (content.style.display === 'none' || content.style.display === '') {
+      content.style.display = 'block';
+      readMoreButton.innerHTML = 'Read Less 🍕';
+    } else {
+      content.style.display = 'none';
+      readMoreButton.innerHTML = 'Read More 🍪';
+    }
+  }
+
