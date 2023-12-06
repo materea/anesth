@@ -1787,6 +1787,10 @@ body.dark-mode {
   border-radius: 7px;
 }
 
+
+.dark-mode .objectives-card {
+  background-color: var(--color-secondary-dark);
+}
         /* Media query for tablets */
         @media (min-width: 600px) {
 
