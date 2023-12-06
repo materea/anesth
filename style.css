@@ -982,7 +982,7 @@ footer p, footer span{
 
 .custom-card .content ul li::before {
   content: '';
-  background: url('/images/icons/check.png') no-repeat left center;
+  background: url('./images/icons/check.png') no-repeat left center;
   height: 15px;
   width: 15px;
   position: absolute;
@@ -1037,7 +1037,7 @@ footer p, footer span{
 .summary-header {
   background-color: var(--color-darker);
   color: var(--color-darker-dark);
-  padding: 10px;
+  padding: 10px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;

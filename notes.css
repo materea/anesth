@@ -40,30 +40,46 @@ html {
     position: relative;
     overflow: hidden;
     border-radius: 15px; /* You can adjust the border-radius value as per your preference */
-  }
+}
 
-  .hero-image {
+.hero-image {
     width: 100%;
     height: auto;
     display: block;
-  }
+}
 
-  .hero-content {
+.hero-content {
     position: absolute;
-    top: 70%;;
-    left: 38%;
-    transform: translate(-50%, -50%);
+    bottom: 0;
+    left: 0;
+    width: 100%;
     color: var(--color-darker-dark);
     text-align: left;
-  }
+}
 
-  .hero-content h1 {
+.hero-content h1 {
     font-size: 2rem;
     margin: 0;
     background-color: var(--color-darker-alpha);
-    padding: 15px 30px;
+    padding: 15px 10px; /* Adjusted padding for better mobile experience */
     border-radius: 10px;
-  }
+}
+
+/* Media query for screens smaller than 768px (typical mobile devices) */
+@media (max-width: 768px) {
+    .hero-content {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        padding: 15px 20px; /* Adjusted padding for better mobile experience */
+    }
+}
+
 
 
   .notes {
