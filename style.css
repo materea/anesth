@@ -833,6 +833,7 @@ footer {
   background-color: var(--color-darker);
   text-align: center;
   padding: 5px 0;
+  font-family: var(--font-family-quartenary);
 }
 
 footer p, footer a{
@@ -968,19 +969,20 @@ footer p, footer span{
 
 .custom-card .content ul {
   list-style-type: none;
+  margin-bottom: 20px;
 }
 
-.custom-card .content li {
-  padding-left: 30px;
+.custom-card .content ul li {
+  padding-left: 20px;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
-.custom-card .content li::before {
+.custom-card .content ul li::before {
   content: '';
-  background: url('/images/icons/check-mark.png') no-repeat left center;
-  height: 10px;
-  width: 10px;
+  background: url('/images/icons/check.png') no-repeat left center;
+  height: 15px;
+  width: 15px;
   position: absolute;
   left: 0;
   top: 50%;
