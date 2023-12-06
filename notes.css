@@ -8,10 +8,10 @@
   --color-red: #f44336;
   --color-secondary: #57a2f8;
   --color-ash: #747474;
-  --font-family-primary: 'Poppins', sans-serif;
+  --font-family-primary: 'Open Sans', sans-serif;
   --font-family-secondary: 'Rubik Mono One', sans-serif;
   --font-family-tertiary: 'Georgia', sans-serif;
-  --font-family-tertiary: 'Georgia', sans-serif;
+  --font-family-quartenary: 'Poppins', sans-serif;
   --td: 150ms;
   --te: cubic-bezier(0.215, 0.61, 0.355, 1);
 
@@ -74,8 +74,8 @@ html {
   }
   
   .notes article section > header {
-    border-bottom: 2px solid var(--color-darker);
-    font-size: 1.1rem;
+    border-bottom: 0.5px solid var(--color-darker);
+    font-size: 1rem;
     top: 0rem;
     z-index: 6;
     line-height: 1.3;
@@ -87,8 +87,8 @@ html {
   }
   
   .notes article section section > header {
-    border-bottom: 1px solid var(--color-darker);
-    font-size: 1.05rem;
+    border-bottom: 0.5px solid var(--color-darker);
+    font-size: 1rem;
     top: 3.5rem;
     z-index: 5;
     line-height: 1.3;
@@ -99,7 +99,7 @@ html {
   }
   
   .notes article section section section > header {
-    border-bottom: 1px dotted var(--color-darker);
+    border-bottom: 0.5px solid var(--color-darker);
     font-size: .95rem;
     top: 6.4rem;
     z-index: 4;
@@ -126,16 +126,7 @@ html {
     text-decoration: none;
   }
 
-  .outline ol li {
-    margin: 5px 0;
-  }
 
-  .outline ol li a{
-    color: var(--color-primary);
-  }
-
-
-/*                    new outline                   */
 
 /* Style for the custom table of contents */
 .custom-toc {
@@ -167,6 +158,7 @@ html {
   border-bottom: 1px dotted ; 
 }
 
+
 .outline2 input[name^=control], .contents {
   position: absolute;
   overflow: hidden;
@@ -174,8 +166,9 @@ html {
   height: 1px;
   width: 1px;
   margin: -1px;
-  padding: 0 20px;
+  padding: 20px 30px;
   border: 0;
+  font-family: var(f);
 }
 
 .outline2 input[id^=show]:checked + label[for^=show] ~ .contents {
@@ -195,6 +188,8 @@ html {
   color: var(--color-darker);
   border-radius: 7px;
   line-height: 2;
+  margin-bottom: 30px;
+
 }
 
 .outline2 .contents a{
@@ -208,6 +203,7 @@ html {
   text-align: center;
   border-radius: 7px;
   z-index: 10;
+  font-family: var(--font-family-quartenary);
 }
 .outline2 label[for^=show] {
   background: var(--color-darker);
@@ -299,10 +295,7 @@ figcaption {
   font-size: 0.65rem;
 }
 
-.contact a{
-  text-decoration: none;
-  color: var(--color-green);
-}
+
 
 .msg {
   font-style: normal;
@@ -349,6 +342,10 @@ table {
 .note-table th {
   background-color: #f2f2f2;
 }
+
+.note-table tr td {
+  padding-left: 15px ;
+}
  
 
 @media (max-width:600px) {
@@ -378,7 +375,6 @@ table {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-
 }
 
 .modal-content {
@@ -390,6 +386,7 @@ table {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  max-width: 900px;
 }
 
 .close {

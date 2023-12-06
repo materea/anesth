@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Rubik+Mono+One|Roboto+Mono:400,700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 
 
 :root {
@@ -14,6 +16,8 @@
   --font-family-primary: 'Poppins', sans-serif;
   --font-family-secondary: 'Rubik Mono One', sans-serif;
   --font-family-tertiary: 'Georgia', sans-serif;
+  --font-family-quartenary: 'Poppins', sans-serif;
+
   --td: 150ms;
   --te: cubic-bezier(0.215, 0.61, 0.355, 1);
 
@@ -45,9 +49,13 @@ h1 {
   margin-bottom: 2rem;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-quartenary);
+}
+
 p {
-  font-size: .75rem;
-  line-height: 1.5;
+  font-size: .7rem;
+  line-height: 1.6;
 }
 
 
@@ -339,7 +347,7 @@ blockquote {
   font-weight: 700;
   line-height: 1.4rem;
   color: var(--color-primary);
-  font-family: var(--font-family-primary);
+  font-family: var(--font-family-quartenary);
   z-index: 98;
   border-radius: 7px;
 }
@@ -612,8 +620,8 @@ blockquote {
   text-decoration: none;
  }
 
-.contribute { 
-  font-size: .65rem;
+.contribute p{ 
+  font-size: .7rem;
 }
 
 .contribute-container { 
@@ -893,7 +901,7 @@ footer p, footer span{
 }
 
 .red-btn:hover{
-  box-shadow:0 0 0 2px var(--color-ash-dark) inset;
+  background-color: var(--color-darker);
   transition:none;
 }
 
@@ -922,7 +930,7 @@ footer p, footer span{
   outline:none;
 }
 
-.objectives-card {
+.custom-card {
   border: 1px solid var(--color-darker-dark);
   border-radius: 8px;
   padding: 20px;
@@ -932,8 +940,7 @@ footer p, footer span{
   background-color: var(--color-darker-dark);
 }
 
-
-.objectives-card .title h2{
+.custom-card .title h2 {
   font-size: .8rem;
   font-weight: bold;
   border-bottom: 1px solid var(--color-ash-dark);
@@ -942,20 +949,45 @@ footer p, footer span{
   margin-top: 10px;
 }
 
-.objectives-card .line p{
+.custom-card .line p {
   margin-bottom: 10px;
   font-size: .6rem;
 }
 
-.objectives-card .content{
+.custom-card .content {
   display: none;
 }
 
-.objectives-card .content p{
+.custom-card .content p, .custom-card .content li{
   font-size: .6rem;
 }
 
-.objectives-card .read-more {
+.custom-card .content li{
+  font-size: .6rem;
+}
+
+.custom-card .content ul {
+  list-style-type: none;
+}
+
+.custom-card .content li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.custom-card .content li::before {
+  content: '';
+  background: url('/images/icons/check-mark.png') no-repeat left center;
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.custom-card .read-more {
   display: inline-block;
   cursor: pointer;
   color: var(--color-primary);
@@ -965,26 +997,31 @@ footer p, footer span{
   border-radius: 10px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   font-size: .55rem;
+  font-family: var(--font-family-quartenary);
 }
 
-.objectives-card .read-more:hover {
+.custom-card .read-more a {
+  font-family: var(--font-family-quartenary);
+}
+
+.custom-card .read-more:hover {
   background-color: var(--color-darker);
 }
 
-.objectives-card .read-more:active {
+.custom-card .read-more:active {
   background-color: var(--color-darker);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive Styles */
 @media screen and (max-width: 600px) {
-  .objectives-card {
+  .custom-card {
     max-width: 100%;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .objectives-card .title h2{
+  .custom-card .title h2 {
     font-size: .8rem;
   }
 }
@@ -1500,12 +1537,7 @@ figcaption {
 
 
 
-/* comment  */
-.comment p{
-  font-size: 0.6rem;
-  color: var(--color-ash);
-  text-align: center;
-}
+
 
 
 /* disclaimer popup */
@@ -1592,7 +1624,7 @@ figcaption {
 /* Style for the toggle switch */
 .dark-mode-toggle {
   position: fixed;
-  top: 4rem; /* Updated to 5rem from the top */
+  top: 4rem; /* Updated to 4rem from the top */
   right: 1rem; /* Updated to 1rem from the right */
   z-index: 999;
   width: 36px;
@@ -1624,7 +1656,7 @@ label.switch-toggle {
   border-radius: 50%;
   background-color: var(--color-darker);
   left: 3px;
-  bottom: -7.5px;
+  bottom: -7.1px;
   transition: 0.4s;
 }
 
@@ -1788,7 +1820,27 @@ body.dark-mode {
 }
 
 
-.dark-mode .objectives-card {
+.dark-mode .custom-card {
+  background-color: var(--color-secondary-dark);
+  border: 1px solid var(--color-secondary-dark);
+
+}
+
+
+.dark-mode .comment-button {
+  background-color: var(--color-secondary);
+  color: var(--color-darker); 
+}
+
+
+/* Styling for hover state */
+.dark-mode .comment-button:hover {
+  background-color: var(--color-secondary-dark);
+  color: var(--color-primary); 
+}
+
+/* Styling for active (pressed) state */
+.comment-button:active {
   background-color: var(--color-secondary-dark);
 }
         /* Media query for tablets */
@@ -1831,3 +1883,62 @@ body.dark-mode {
 }
   
  
+
+/* COMMENT ON WHATSAPP */
+
+  /* Basic styling for the comment container */
+  .comment-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+
+  /* Styling for the comment icon on the left */
+  .comment-icon {
+    margin-right: 20px;
+    width: 40px; 
+    height: 40px; 
+  }
+
+  /* Styling for the text on the right */
+  .comment-text {
+    flex-grow: 1;
+    
+  }
+
+  /* Styling for the comment button and anchor */
+  .comment-button {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: var(--color-darker);
+    color: var(--color-primary); 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none; /* Remove default underline for anchor */
+    font-family: var(--font-family-quartenary);
+  }
+
+
+  /* Styling for hover state */
+  .comment-button:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-darker); 
+  }
+
+  /* Styling for active (pressed) state */
+  .comment-button:active {
+    background-color: var(--color-darker);
+  }
+
+  /* Styling for the icon inside the comment button */
+  .comment-button img {
+    margin-left: 5px; 
+    width: 20px; 
+    height: 20px; 
+  }

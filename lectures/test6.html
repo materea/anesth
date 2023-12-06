@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .practice-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px;
+      max-width: 400px;
+    }
+
+    .practice-card .icon {
+      margin-right: 10px;
+    }
+
+    .practice-card .title {
+      font-size: 1.2em;
+      font-weight: bold;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    .practice-card .line {
+      margin-bottom: 10px;
+    }
+
+    .practice-card .content {
+      display: none;
+    }
+
+    .practice-card .read-more {
+        display: inline-block;
+      cursor: pointer;
+      color: #fff;
+      background-color: #007bff;
+      border: 1px solid #007bff;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .practice-card .read-more:hover {
+      background-color: #0056b3;
+    }
+
+    .practice-card .read-more:active {
+      background-color: #004080;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Responsive Styles */
+    @media screen and (max-width: 600px) {
+      .practice-card {
+        max-width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .practice-card .title {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="practice-card" id="practice-card">
+    <div class="icon"><img src="../images/icons/lightbulb.png" alt="Icon" class="icon"></div>
+    <div class="title">What you should learn</div>
+    <div class="line">
+      <p>Short description goes here.</p>
+    </div>
+    <div class="content">
+        <p>This content is not available yet.</p>
+    </div>
+    <div class="read-more" onclick="toggleContent()">Read More</div>
+  </div>
+
+  <script>
+    function toggleContent() {
+      var content = document.querySelector('.practice-card .content');
+      var readMoreButton = document.querySelector('.practice-card .read-more');
+
+      if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+        readMoreButton.innerHTML = 'Read Less';
+      } else {
+        content.style.display = 'none';
+        readMoreButton.innerHTML = 'Read More';
+      }
+    }
+  </script>
+
+</body>
+</html>
