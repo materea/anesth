@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contributors Box</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contributor-box {
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.contributor-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.contributor-info {
+    flex: 1;
+}
+
+.contributor-name {
+    margin: 0;
+    color: #333;
+}
+
+.contributor-description {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icon img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+    </style>
+</head>
+<body>
+
+    <h2 class="contributors-header">Contributors</h2>
+
+    <div class="contributors-container">
+    
+        <div class="contributor-box">
+            <img class="contributor-avatar" src="contributor1-avatar.jpg" alt="Contributor 1 Avatar">
+            <div class="contributor-info">
+                <h3 class="contributor-name">John Doe</h3>
+                <p class="contributor-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="social-links">
+                    <a href="#" target="_blank" class="social-icon">
+                        <img src="social-icon1.png" alt="Social Icon 1">
+                    </a>
+                    <a href="#" target="_blank" class="social-icon">
+                        <img src="social-icon2.png" alt="Social Icon 2">
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="contributor-box">
+            <img class="contributor-avatar" src="contributor2-avatar.jpg" alt="Contributor 2 Avatar">
+            <div class="contributor-info">
+                <h3 class="contributor-name">Jane Smith</h3>
+                <p class="contributor-description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <div class="social-links">
+                    <a href="#" target="_blank" class="social-icon">
+                        <img src="social-icon1.png" alt="Social Icon 1">
+                    </a>
+                    <a href="#" target="_blank" class="social-icon">
+                        <img src="social-icon2.png" alt="Social Icon 2">
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+</body>
+</html>

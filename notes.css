@@ -8,6 +8,7 @@
   --color-green: #4caf50;
   --color-red: #f44336;
   --color-secondary: #57a2f8;
+  --color-secondary-lighter: #f4f4f4;
   --color-secondary-alpha: #57a2f85f;
   --color-ash: #747474;
   --font-family-primary: 'Open Sans', sans-serif;
@@ -39,13 +40,11 @@ html {
   .hero-container {
     overflow: hidden;
     border-radius: 15px; 
-    background: url('./images/heros/preop.png');
-    background-size: cover;
-    background-position: center center;
     height: 50vh;
     position: relative;
     width: 98%;
     margin: auto;
+    margin-top: 10px;
 }
 
 

@@ -117,22 +117,25 @@ function toggleContent(cardId) {
 
 //   READ SUMMARY
 
-  document.addEventListener("DOMContentLoaded", function () {
-    // Show summary card on trigger click
-    document.getElementById("summaryTrigger").addEventListener("click", function () {
-      document.getElementById("summaryCard").style.display = "block";
-    });
-  
-    // Hide summary card on close button click
-    document.getElementById("closeBtn").addEventListener("click", function () {
-      document.getElementById("summaryCard").style.display = "none";
-    });
-  
-    // Hide summary card on outside click
-    document.addEventListener("mouseup", function (e) {
-      var summaryCard = document.getElementById("summaryCard");
-      if (!summaryCard.contains(e.target)) {
-        summaryCard.style.display = "none";
-      }
-    });
+document.addEventListener("DOMContentLoaded", function () {
+  // Show summary card on trigger click
+  document.getElementById("summaryTrigger").addEventListener("click", function () {
+    document.getElementById("summaryCard").style.display = "block";
+    document.getElementById("summaryOverlay").style.display = "block";
   });
+
+  // Hide summary card on close button click
+  document.getElementById("closeBtn").addEventListener("click", function () {
+    document.getElementById("summaryCard").style.display = "none";
+    document.getElementById("summaryOverlay").style.display = "none";
+  });
+
+  // Hide summary card on outside click
+  document.addEventListener("mouseup", function (e) {
+    var summaryCard = document.getElementById("summaryCard");
+    if (!summaryCard.contains(e.target)) {
+      summaryCard.style.display = "none";
+      document.getElementById("summaryOverlay").style.display = "none";
+    }
+  });
+});

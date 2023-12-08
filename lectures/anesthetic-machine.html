@@ -50,29 +50,93 @@
       <span><a href="../contribute.html">Contribute here</a> </span>
     </div>
 
-    <h1>Anesthetic Machine </h1>
+      <!-- TOPIC AND IMAGE CONTAINER  -->
+
+  <div class="hero-container" style="background: url('../images/heros/anesthetic-machine.png');     background-size: cover;     background-position: center center;">
+    <div class="hero-content">
+      <h1>Anesthetic Machine </h1>
+    </div>
+  </div>
+
+  <!-- END OF TOPIC AND IMAGE CONTAINER  -->
   
 
 
     <article class="notes">
         <a id='top'></a>
-    <article>
-    <!-- <h2 class='title'>Outline</h2> -->
+        <article>
 
-    <div class="outline2">
-
-      <input type="radio" name="control-2" id="show-2">
-      <label for="show-2">Show Outline</label>
-      <input type="radio" name="control-2" id="hide-2">
-      <label for="hide-2">Hide Outline</label>
-      <div class="contents">
-        <div id="tableOfContents">
-            <ol id="tocList"></ol>
-        </div>
-      </div>
-     <div>
-
-
+          <!-- LEARNING OBJECTIVES CONTAINER  -->
+              <div class="custom-card" id="custom-card-1">
+                <div class="icon"><img src="../images/icons/light-bulb.png" alt="Icon" class="icon"></div>
+                <div class="title"> 
+                  <h2>What You Need to Learn</h2>
+                </div>
+                <div class="line">
+                  <p>After reading this note, you should be able to...</p>
+                </div>
+                <div class="content">
+                  <ul>
+                    <li><i>This content is not available yet.</i></li>
+                </ul>
+                </div>
+                <div class="read-more" onclick="toggleContent('custom-card-1')">Read More 🍪</div>
+              </div>
+            
+          <!-- END OF LEARNING OBJECTIVES CONTAINER  -->
+        
+        
+          <!-- SHOW AND HIDE OUTLINE CONTAINER  -->
+            <div class="outline2">
+        
+              <input type="radio" name="control-2" id="show-2">
+              <label for="show-2">🐵&nbsp; &nbsp;Show Outline</label>
+              <input type="radio" name="control-2" id="hide-2">
+              <label for="hide-2">🙈&nbsp; &nbsp; Hide Outline</label>
+              <div class="contents">
+                <div class="icon-box">
+                  <!-- Replace 'path/to/your/icon.png' with the actual path to your PNG icon -->
+                  <img src="../images/icons/book.png" alt="Icon" class="icon">
+                </div>
+                <div id="tableOfContents">
+                    <ol id="tocList"></ol>
+                </div>
+              </div>
+             <div>
+        
+        <!-- END OF SHOW AND HIDE OUTLINE CONTAINER  -->
+        
+        
+        <!-- READ SUMMARY CONTAINER -->
+        
+              <!-- Summary Overlay -->
+              <div class="summary-overlay" id="summaryOverlay"></div>
+        
+        
+              <div class="summary-card" id="summaryCard">
+                
+                <div class="summary-header">
+                  <h3>Note Summary</h3>
+                  <div class="icon-box">
+                    <!-- Replace 'path/to/your/icon.png' with the actual path to your PNG icon -->
+                    <img src="../images/icons/summary.png" alt="Icon" class="icon">
+                  </div>
+                </div>
+                <div class="summary-content">
+                  <!-- Summary content goes here -->
+                  <p><i>This content is not available yet.</i></p>
+        
+                  <span class="close-btn" id="closeBtn">close</span>
+                </div>
+              </div>
+        
+              <div class="summary-trigger" id="summaryTrigger">
+                <p>Click here to read a summary</p>
+            </div>
+        <!-- END OF READ SUMMARY CONTAINER -->
+        
+            <!-- BEGINNING OF NOTE -->
+        
       <section id='header-1'>
         <header>
           <h2>
@@ -264,14 +328,87 @@
 
       </section>
 
-      <div class="contact">
-        <hr style="margin: 3rem 0;">
+     <hr style="margin: 3rem 0;">
 
-      
-                <div class="comment">
-        <p>Send your comments, corrections, explanations/clarifications and requests/suggestions to our <a href="https://chat.whatsapp.com/FtDdb6uEFYzBCnTnMgm2Z1">WhatsApp group</a>.</p>
+      <!-- PRACTICE QUESTIONS CONTAINER -->
+
+      <div class="custom-card" id="custom-card-2">
+        <div class="icon"><img src="../images/icons/practice-questions.png" alt="Icon" class="icon"></div>
+        <div class="title"> 
+          <h2>Practice Questions</h2>
+        </div>
+        <div class="line">
+          <p>Check how well you grasp the concepts by answering the following questions...</p>
+        </div>
+        <div class="content">
+          <ol>
+            <li><i>This content is not available yet.</i></li>
+          </ol>
+        </div>
+        <div class="read-more" onclick="toggleContent('custom-card-2')">Read More 🍪</div>
+      </div>
+
+      <!-- END OF PRACTICE QUESTIONS CONTAINER -->
+
+
+      <!-- CONTACT- COMMENT AND CONTRIBUTORS CONTAINER -->
+      <div class="contact">
+        <div class="comment-container">
+          <div class="comment-icon">
+            <!-- Add your icon image here -->
+            <img src="../images/icons/comment.png" alt="Comment Icon">
+          </div>
+          <div class="comment-text">
+            <!-- Add your text here -->
+            <p>Send your comments, corrections, explanations/clarifications and requests/suggestions </p>
+          </div>
+          <a href="https://chat.whatsapp.com/FtDdb6uEFYzBCnTnMgm2Z1" class="comment-button">
+            here
+            <img src="../images/icons/whatsapp.png" alt="Image Icon">
+          </a>
+        </div>
+
+        <div class="contributors-container">
+
+          <h2 class="contributors-header">Contributors</h2>
+  
+        <br>
+            <div class="contributor-box">
+                <img class="contributor-avatar" src="../images/icons/woman.png" alt="Contributor 1 Avatar">
+                <div class="contributor-info">
+                    <h3 class="contributor-name">Jane Smith</h3>
+                    <p class="contributor-description">She is not a real contributor.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" class="social-icon">
+                            <img src="../images/icons/whatsapp.png" alt="Social Icon 1">
+                        </a>
+                        <a href="#" target="_blank" class="social-icon">
+                            <img src="../images/icons/twitter.png" alt="Social Icon 2">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="contributor-box">
+                <img class="contributor-avatar" src="../images/icons/man.png" alt="Contributor 2 Avatar">
+                <div class="contributor-info">
+                    <h3 class="contributor-name">John Doe</h3>
+                    <p class="contributor-description">He is not a real contributor.</p>
+                    <div class="social-links">
+                      <a href="#" target="_blank" class="social-icon">
+                        <img src="../images/icons/whatsapp.png" alt="Social Icon 1">
+                    </a>
+                    <a href="#" target="_blank" class="social-icon">
+                        <img src="../images/icons/linkedin.png" alt="Social Icon 2">
+                    </a>
+                    </div>
+                </div>
+            </div>
+        
         </div>
       </div>
+
+            <!-- END OF CONTACT- COMMENT AND CONTRIBUTORS CONTAINER -->
     </article>
    </article>
    <div style="height: 300px;"></div>
