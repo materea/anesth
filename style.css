@@ -16,7 +16,7 @@
   --color-secondary-lighter: #f4f4f4;
   --color-secondary-alpha: #57a2f85f;
   --color-ash: #747474;
-  --font-family-primary: 'Poppins', sans-serif;
+  --font-family-primary: 'Open Sans', sans-serif;
   --font-family-secondary: 'Rubik Mono One', sans-serif;
   --font-family-tertiary: 'Georgia', sans-serif;
   --font-family-quartenary: 'Poppins', sans-serif;
@@ -623,15 +623,12 @@ blockquote {
   text-decoration: none;
  }
 
-.contribute p{ 
-  font-size: .7rem;
-  font-family: var(--font-family-primary);
-}
 
 .contribute-container { 
   width: 80%;
   margin: auto;
 }
+
 
 .contribute-container a {
   display: inline-block;
@@ -642,6 +639,11 @@ blockquote {
   color: var(--color-green);
   transition: background-color 0.3s; 
   font-size: smaller;
+}
+
+.contribute-container p {
+font-family: var(--font-family-primary);
+font-size: .65em;
 }
 
 .contribute-container a:hover {
