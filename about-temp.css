@@ -1,35 +1,90 @@
-@import url("https://fonts.googleapis.com/css?family=Rubik+Mono+One|Roboto+Mono:400,700&display=swap");
-/* :root {
-  --color-primary: #172a46;
-  --color-primary: #9da8c7;
-  --color-primary: #08162a;
-  --color-darker: #03080f;
-  --color-darker: #749bd1;
-  --color-darker: #ccd6f6;
-  --color-yellow: #faa356;
-  --color-red: #fa7970;
-  --color-secondary: #7ce38b;
-  --font-family-primary: 'Roboto Mono', monospace;
-  --font-family-secondary: 'Rubik Mono One', sans-serif;
-  --td: 150ms;
-  --te: cubic-bezier(0.215, 0.61, 0.355, 1);
-} */
-
-body {
-    background-color: var(--color-primary);
-  }
-
-  h1 {
-    color: var(--color-darker);
-  }
+.about-banner {
+  background: url(./images/african-medical-students.jpg) no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  height: 15rem;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  border-radius: 15px;
   
-  * { color: var(--color-darker); text-decoration: none;}
-
-  .contact {
-    position: fixed;
-    bottom: 3rem;
-    right: 0%;
+  &:after {
+    background: radial-gradient(ellipse at center, rgba(0, 16, 40, 0) 30%,rgba(0, 16, 40, 0.8) 100%);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
     width: 100%;
-    text-align: center;
+    z-index: 3;
+    border-radius: 15px;
+
+  }
 }
 
+
+.about-logo {
+  left: 50%;
+  margin: 50px 0 50px -150px;
+  opacity: 0.8;
+  position: absolute;
+  width: 300px;
+}
+
+.about-content {
+  box-shadow: 0 -1px 2px rgba(black,0.4); 
+  padding: 4% 0 200px;
+  position: relative;
+  z-index: 2;
+  
+  .about-content .inner {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 40px 30px;
+  }
+ 
+}
+
+
+.about-wrapper .img.parallax {
+  background-position: center center;
+  background-size: cover;
+  height: 5rem;
+  position: relative;
+  width: 100%;
+  border-radius: 15px;
+
+
+  &:after {
+    background: radial-gradient(ellipse at center, rgba(0, 16, 40, 0) 30%,rgba(0, 16, 40, 0.8) 100%);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border-radius: 15px;
+
+  }
+}
+.about-wrapper .img.parallax {
+  background-image: url(./images/hero2.jpg);
+
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+  .about-banner {
+    background-size: contain;
+    height: 7rem;
+  }
+  
+  .about-wrapper .img {
+    background-size: cover;
+    height: 7rem;  }
+}

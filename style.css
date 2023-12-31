@@ -8,7 +8,7 @@
 :root {
   --color-primary: #fff;
   --color-darker: #001028;
-  --color-darker-alpha: #00102881;
+  --color-darker-alpha: rgba(0, 16, 40, 0.506);
   --color-yellow: #f4b400;
   --color-green: #4caf50;
   --color-red: #f44336;
@@ -624,13 +624,88 @@ blockquote {
  }
 
 
-.contribute-container { 
-  width: 80%;
-  margin: auto;
+ .contribute-banner {
+  background: url(./images/medical-books.jpg) no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  height: 15rem;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  border-radius: 15px;
+  
+  &:after {
+    background: radial-gradient(ellipse at center, rgba(0, 16, 40, 0) 30%,rgba(0, 16, 40, 0.8) 100%);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    border-radius: 15px;
+
+  }
 }
 
 
-.contribute-container a {
+.contribute-logo {
+  left: 50%;
+  margin: 50px 0 50px -150px;
+  opacity: 0.8;
+  position: absolute;
+  width: 300px;
+}
+
+.contribute-content {
+  box-shadow: 0 -1px 2px rgba(black,0.4); 
+  padding: 4% 0 200px;
+  position: relative;
+  z-index: 2;
+  
+  .contribute-content .inner {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 40px 30px;
+  }
+ 
+}
+
+
+.contribute-wrapper .img.parallax {
+  background-position: center center;
+  background-size: cover;
+  height: 5rem;
+  position: relative;
+  width: 100%;
+  border-radius: 15px;
+
+
+  &:after {
+    background: radial-gradient(ellipse at center, rgba(0, 16, 40, 0) 30%,rgba(0, 16, 40, 0.8) 100%);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border-radius: 15px;
+
+  }
+}
+
+.contribute-wrapper .img.parallax {
+  background-image: url(./images/hero.png);
+}
+
+
+
+
+
+
+
+.contribute-wrapper a {
   display: inline-block;
   padding: 2px 4px; 
   border-radius: 5px; 
@@ -641,24 +716,18 @@ blockquote {
   font-size: smaller;
 }
 
-.contribute-container p {
-font-family: var(--font-family-primary);
-font-size: .65em;
-}
 
-.contribute-container a:hover {
+
+.contribute-wrapper a:hover {
   background-color: var(--color-secondary); 
   color: var(--color-darker); 
 }
 
-.contribute-container a:active {
+.contribute-wrapper a:active {
   background-color: var(--color-secondary); 
   color: var(--color-darker); 
 }
 
- .contribute img {
-  margin-top: 2rem;
- }
 
 
 
@@ -732,6 +801,19 @@ font-size: .65em;
   .contributor-box {
       width: 60%;
       margin-left: 20px; /* Move the box to the left on larger screens */
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .contribute-banner {
+    background-size: contain;
+    height: 7rem;
+  }
+  
+  .contribute-wrapper .img {
+    background-size: cover;
   }
 }
 
@@ -886,8 +968,9 @@ font-size: .65em;
   -o-transform: translate(0,-50%);
   transform: translate(0,-50%);
   left: 30px;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: .9rem;
+  font-weight: 400;
+  font-family: var(--font-family-tertiary);
 }
 .topics ul li span {
   display: block;
@@ -1008,7 +1091,8 @@ footer p, footer span{
 }
 
 .red-btn:hover{
-  background-color: var(--color-darker);
+  background-color: var(--color-secondary);
+  color: var(--color-darker);
   transition:none;
 }
 
@@ -1856,6 +1940,47 @@ input[type="checkbox"] {
   display: none;
 }
 
+/* BEGINNING OF GETTING STARTED  */
+
+
+.getting-started {
+  background-color: blue;
+  background: url(./images/fam-med.png) no-repeat center center fixed; 
+  border-radius: 10px;
+  background-size: cover;
+  height: 100%;
+  padding: 4%;
+  position: relative;
+}
+
+
+.getting-started-card{
+  height: 200px;
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+   margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 8px;
+  -webkit-box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
+          box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
+  font-family: 'Poppins',sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.getting-started-card h1{
+  font-size: 2rem;
+  text-shadow: 0.05em 0.05em 0.05em rgba(black,0.4);
+}
+
+/* END OF GETTING STARTED */
 
 /* Dark Mode Styles */
 body.dark-mode {
@@ -1887,7 +2012,7 @@ body.dark-mode {
 }
 
 .dark-mode .menu__link::before, .menu__link::after {
-  background-color: var(--color-darker-dark);
+  background-color: var(--color-secondary);
 }
 
 .dark-mode .menu__item:hover > .menu__link {
