@@ -2238,6 +2238,11 @@ body.dark-mode {
 .dark-mode .contributor-description {
   color: var(--color-darker-dark);
 }
+
+.dark-mode .getting-started-card h1{
+ color: var(--color-darker);
+}
+
 /* Styling for active (pressed) state */
 .comment-button:active {
   background-color: var(--color-secondary-dark);
