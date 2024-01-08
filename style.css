@@ -794,29 +794,7 @@ blockquote {
   border-radius: 50%;
 }
 
-@media only screen and (min-width: 600px) {
-  .contributors-header {
-      margin-bottom: 20px; /* Adjusted space below contributors header for larger screens */
-  }
 
-  .contributor-box {
-      width: 60%;
-      margin-left: 20px; /* Move the box to the left on larger screens */
-  }
-
-}
-
-@media only screen and (max-width: 600px) {
-
-  .contribute-banner {
-    background-size: contain;
-    height: 7rem;
-  }
-  
-  .contribute-wrapper .img {
-    background-size: cover;
-  }
-}
 
 
 
@@ -2365,4 +2343,31 @@ body.dark-mode {
   }
 
 
+  @media only screen and (min-width: 600px) {
+    .contributors-header {
+        margin-bottom: 20px; /* Adjusted space below contributors header for larger screens */
+    }
   
+    .contributor-box {
+        width: 60%;
+        margin-left: 20px; /* Move the box to the left on larger screens */
+    }
+  
+  }
+  
+  @media only screen and (max-width: 600px) {
+  
+    .contribute-banner {
+      background-size: contain;
+      height: 7rem;
+    }
+    
+    .contribute-wrapper .img {
+      background-size: cover;
+    }
+  
+    .getting-started-card{
+      width: 90%;
+  
+    }
+  }
