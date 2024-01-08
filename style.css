@@ -11,7 +11,7 @@
   --color-darker-alpha: rgba(0, 16, 40, 0.506);
   --color-yellow: #f4b400;
   --color-green: #4caf50;
-  --color-red: #ff3333;
+  --color-red: #45a049;
   --color-secondary: #57a2f8;
   --color-secondary-lighter: #f4f4f4;
   --color-secondary-alpha: #57a2f85f;
@@ -1976,7 +1976,7 @@ input[type="checkbox"] {
 
 .toggle-btn {
   position: fixed;
-  bottom: 5px;
+  bottom: 15px;
   left: 15px;
   background-color: var(--color-secondary);
   border: none;
@@ -1999,19 +1999,18 @@ input[type="checkbox"] {
   right: 10px;
   font-size: .7rem;
   font-weight: 500;
-  padding: 8px 15px;
-  background-color: var(--color-red);
-  color: var(--color-darker-dark);
+  padding: 10px 20px;
+  width: 90%;
 }
 
 .toggle-menu {
   width: 250px;
 }
 
-/* #toggleSidebarBtn:hover,
+#toggleSidebarBtn:hover,
 #closeSidebarBtn:hover {
   background-color: var(--color-secondary);
-} */
+}
 
 .toggle-menu li.current-page a {
   background-color: var(--color-secondary); /* Highlight color for the current page */
