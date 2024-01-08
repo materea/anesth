@@ -11,7 +11,7 @@
   --color-darker-alpha: rgba(0, 16, 40, 0.506);
   --color-yellow: #f4b400;
   --color-green: #4caf50;
-  --color-red: #f44336;
+  --color-red: #ff3333;
   --color-secondary: #57a2f8;
   --color-secondary-lighter: #f4f4f4;
   --color-secondary-alpha: #57a2f85f;
@@ -520,6 +520,7 @@ blockquote {
 .menu__item .submenu .menu__link:hover {
   background-color: var(--color-secondary);
 }
+
 
 
 .contribute-cta p, .contribute-cta span{
@@ -1940,12 +1941,91 @@ input[type="checkbox"] {
   display: none;
 }
 
+/* BEGINNING OF SIDEBAR */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 98;
+  top: 0;
+  left: 0;
+  background-color: var(--color-darker);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 91;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: .7rem;
+  color: var(--color-ash);
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: var(--color-darker-dark);
+}
+
+.sidebar-menu {
+  padding: 0;
+  list-style-type: none;
+}
+
+.toggle-btn {
+  position: fixed;
+  bottom: 5px;
+  left: 15px;
+  background-color: var(--color-secondary);
+  border: none;
+  color: var(--color-darker);
+  padding: 5px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 7px;
+  z-index: 90;
+}
+
+.sidebar .close-btn {
+  position: relative;
+  top: 10px;
+  right: 10px;
+  font-size: .7rem;
+  font-weight: 500;
+  padding: 8px 15px;
+  background-color: var(--color-red);
+  color: var(--color-darker-dark);
+}
+
+.toggle-menu {
+  width: 250px;
+}
+
+/* #toggleSidebarBtn:hover,
+#closeSidebarBtn:hover {
+  background-color: var(--color-secondary);
+} */
+
+.toggle-menu li.current-page a {
+  background-color: var(--color-secondary); /* Highlight color for the current page */
+  color: var(--color-darker); /* Text color for the current page */
+}
+
+
+
+ /* END OF SIDEBAR */
+
 /* BEGINNING OF GETTING STARTED  */
 
 
 .getting-started {
-  background-color: blue;
-  background: url(./images/fam-med.png) no-repeat center center fixed; 
   border-radius: 10px;
   background-size: cover;
   height: 100%;
