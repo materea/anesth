@@ -11,7 +11,7 @@
   --color-darker-alpha: rgba(0, 16, 40, 0.506);
   --color-yellow: #f4b400;
   --color-green: #4caf50;
-  --color-red: #45a049;
+  --color-red: #ff3333;
   --color-secondary: #57a2f8;
   --color-secondary-lighter: #f4f4f4;
   --color-secondary-alpha: #57a2f85f;
@@ -94,13 +94,7 @@ p {
   padding: 2px 4px;
 }
 
-blockquote {
-  border-left-style: solid;
-  border-left-width: 0.3rem;
-  border-left-color: var();
-  padding: 0.5rem;
-  font-style: italic;
-}
+
 
 .page-container {
   display: -webkit-box;
@@ -1977,18 +1971,16 @@ input[type="checkbox"] {
   right: 10px;
   font-size: .7rem;
   font-weight: 500;
-  padding: 10px 20px;
-  width: 90%;
+  padding: 8px 15px;
+  background-color: var(--color-red);
+  color: var(--color-primary);
 }
 
 .toggle-menu {
   width: 250px;
 }
 
-#toggleSidebarBtn:hover,
-#closeSidebarBtn:hover {
-  background-color: var(--color-secondary);
-}
+
 
 .toggle-menu li.current-page a {
   background-color: var(--color-secondary); /* Highlight color for the current page */
@@ -2039,6 +2031,51 @@ input[type="checkbox"] {
 
 /* END OF GETTING STARTED */
 
+
+
+ blockquote {
+	 margin-inline: auto;
+}
+
+
+/* BLOCKQUOTE CARD */
+ blockquote.q-card {
+	 --padding: 1rem;
+	 padding: var(--padding);
+	 color: var(--color-darker);
+	 font-weight: 600;
+	 background-color: var(--color-secondary);
+	 display: grid;
+	 gap: 1rem;
+	 background-image: radial-gradient(circle, var(--color-darker-alpha) calc(25% - 1px), transparent 15%);
+	 background-size: 0.5rem 0.5rem;
+	 border-radius: 0.25rem;
+   margin: 2rem 0;
+}
+ blockquote.q-card::before {
+	 --qHeight: 4rem;
+	 content: "";
+	 margin-left: calc(var(--padding) * -1);
+	 margin-top: calc(var(--padding) * -1);
+	 height: var(--qHeight);
+	 width: calc(var(--qHeight) * 1.1);
+	 background-image: radial-gradient(circle at bottom right, transparent calc(var(--qHeight) / 4 - 1px), var(--color-darker) calc(var(--qHeight) / 4) calc(var(--qHeight) / 2), transparent calc(var(--qHeight) / 2 + 1px)), linear-gradient(var(--color-darker), var(--color-darker));
+	 background-size: calc(var(--qHeight) / 2) calc(var(--qHeight) / 2);
+	 background-position: top left, bottom left;
+	 background-repeat: space no-repeat;
+}
+ blockquote.q-card > .author {
+	 color: var(--color-darker-dark);
+	 background-color: var(--color-darker);
+	 justify-self: end;
+	 font-size: 0.75em;
+	 padding: 0.5em 1em;
+	 border-radius: 0.25rem;
+}
+ blockquote.q-card > .author::before {
+	 content: "- ";
+}
+ 
 /* Dark Mode Styles */
 body.dark-mode {
   background-color: var(--color-primary-dark);

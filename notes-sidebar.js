@@ -11,9 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "Inhalational Anesthetic Agents",
         "Intravenous Anesthetic Agents",
         "Local Anesthetic Pharmacology",
-        "Muscle Relaxants - Neuromuscular Blocking Drugs",
-        "Anaesthesia for Emergency Surgery-Challenges and Preparation",
-        "Mendelson’s Syndrome",
+        "Muscle Relaxants Neuromuscular Blocking Drugs",
+        "Anaesthesia for Emergency Surgery Challenges and Preparation Mendelsons Syndrome",
         "Pediatric Anesthesia",
         "Post-operative Care",
         "Post-operative Pain",
@@ -83,10 +82,14 @@ document.addEventListener('DOMContentLoaded', function () {
         closeSidebar();
       }
     }
-
+    
     // Attach event listener to the document for clicks
     document.addEventListener('click', closeSidebarOnClickOutside);
 
+    
     // Create the sidebar menu on page load
     createSidebarMenu();
   });
+
+
+  
