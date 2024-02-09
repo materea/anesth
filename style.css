@@ -1825,7 +1825,7 @@ figcaption {
   text-align: center;
   color: var(--color-ash);
   padding: 20px;
-  width: 500px;
+  width: 80%;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -2232,7 +2232,6 @@ body.dark-mode {
   border: none;
   box-shadow: 0 0 7px var(--color-secondary-alpha);
   color: var(--color-darker-dark);
-  width: 80%;
 }
 
 
