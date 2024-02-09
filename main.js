@@ -150,5 +150,3 @@ document.addEventListener("scroll", function() {
 });
 
 
-
-

@@ -1,6 +1,6 @@
 .about-banner {
-  background: url(./images/african-medical-students.jpg) no-repeat;
-  background-attachment: fixed;
+  background: url(./images/hero2.jpg) no-repeat;
+  /* background-attachment: fixed; */
   background-position: center center;
   background-size: cover;
   height: 15rem;
@@ -79,10 +79,10 @@
 
 @media only screen and (max-width: 600px) {
 
-  .about-banner {
+  /* .about-banner {
     background-size: contain;
     height: 7rem;
-  }
+  } */
   
   .about-wrapper .img {
     background-size: cover;

@@ -522,7 +522,7 @@ p {
   font-size: 0.5rem;
 }
 
-.contribute-cta span a {
+.contribute-cta span a, .warning-popup a {
   text-decoration: underline;
   text-decoration-style: dotted;
   color: var(--color-primary);
@@ -620,8 +620,8 @@ p {
 
 
  .contribute-banner {
-  background: url(./images/medical-books.jpg) no-repeat;
-  background-attachment: fixed;
+  background: url(./images/hero.png) no-repeat;
+  /* background-attachment: fixed; */
   background-position: center center;
   background-size: cover;
   height: 15rem;
@@ -1813,6 +1813,55 @@ figcaption {
   color: var(--color-darker);
 }
 
+
+
+/* warning popup */
+
+.warning-popup {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: var(--color-ash);
+  padding: 20px;
+  width: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100; /* Ensure the popup is on top of other elements */
+  display: none; /* Initially hidden */
+
+}
+
+.warning-popup h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-family: var(--font-family-quartenary);
+}
+
+.warning-popup p {
+  margin-bottom: 15px;
+  text-align: left;
+  font-family: var(--font-family-primary);
+}
+
+#close-popup {
+  background-color: var(--color-darker);
+  color: var(--color-primary);
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: var(--font-family-quartenary);
+}
+
+#close-popup:hover {
+  background-color: var(--color-red);
+}
+
 /* more-resources */
 .more-resources-card {
   background-color: var(--color-darker);
@@ -2177,6 +2226,18 @@ body.dark-mode {
   color: var(--color-darker);
 }
 
+
+.dark-mode .warning-popup {
+  background-color: var(--color-secondary-dark);
+  border: none;
+  box-shadow: 0 0 7px var(--color-secondary-alpha);
+  color: var(--color-darker-dark);
+  width: 80%;
+}
+
+
+
+
 .dark-mode .summary-card {
   background-color: var(--color-secondary-dark);
   box-shadow: 0 0 7px var(--color-secondary-alpha);
@@ -2280,6 +2341,18 @@ body.dark-mode {
  color: var(--color-darker);
 }
 
+.dark-mode .sidebar {
+  background-color: var(--color-secondary-dark);
+}
+
+.dark-mode .sidebar a {
+  color: var(--color-darker-dark);
+}
+
+.sidebar a:hover {
+  color: var(--color-ash);
+}
+
 /* Styling for active (pressed) state */
 .comment-button:active {
   background-color: var(--color-secondary-dark);
@@ -2313,9 +2386,10 @@ body.dark-mode {
   
   }
   
-  .popup {
+  .popup, .warning-popup {
     width: 60%;
   }
+  
 
   #content {
     top: 59%; /* Adjust the distance below the search box */
@@ -2399,10 +2473,10 @@ body.dark-mode {
   
   @media only screen and (max-width: 600px) {
   
-    .contribute-banner {
+    /* .contribute-banner {
       background-size: contain;
       height: 7rem;
-    }
+    } */
     
     .contribute-wrapper .img {
       background-size: cover;

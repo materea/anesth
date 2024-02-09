@@ -62,8 +62,18 @@
           <button class="flat-btn up">Getting Started</button>
         </a>
       
+        <div id="welcome-popup" class="warning-popup">
+          <h2>Welcome!</h2>
+          <p>Please note that we are still in the process of fine-tuning and perfecting our content to make it relevant and useful. As a result, you may encounter errors in the text and missing or broken links throughout the site. We apologize for any inconvenience this may cause.</p>
+          <p>Your feedback is invaluable to us! If you come across any mistakes or encounter missing/broken links, we would greatly appreciate it if you could bring them to our attention. You can help us improve by sending us a message <a href="https://chat.whatsapp.com/FtDdb6uEFYzBCnTnMgm2Z1">here</a>.</p>
+          <p>Thank you for your understanding and patience as we work to enhance your learning experience.</p>
+          <p><em>Sincerely</em>,</p>
+          <p><strong>The materea team</strong></p>
+          <button id="close-popup">Okay</button>
+        </div>
+
+
       </div>
-   
     </section>
     
   </main>
@@ -111,6 +121,29 @@
 <a href="#" class="scrollup" id="scroll-up"> 
   <i class="ri-arrow-up-fill scrollup__icon"></i>
 </a>
+
+<script>
+  window.addEventListener('load', () => {
+    const popup = document.getElementById('welcome-popup');
+    const closeButton = document.getElementById('close-popup');
+  
+    // Show the popup on page load
+    popup.style.display = 'block';
+  
+    // Close the popup when the button is clicked
+    closeButton.addEventListener('click', () => {
+      popup.style.display = 'none';
+    });
+  
+    // Close the popup when clicked outside
+    document.addEventListener('click', (event) => {
+      if (event.target !== popup && !popup.contains(event.target)) {
+        popup.style.display = 'none';
+      }
+    });
+  });
+  
+  </script>
 <script src="main.js"></script>
 </body>
 </html>
