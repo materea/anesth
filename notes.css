@@ -40,25 +40,25 @@ html {
     bottom: 0;
 }
 
-
+  .page-container {
+    padding: 1rem;
+  }
 
   .notes {
     font-size: 0.7rem;
     line-height: 1.8;
+    width: 100%;
   }
   
   .notes article .title {
     font-size: 2rem;
   }
   
-  /* .notes article section {
-    background-color: inherit;
-  } */
   
+
   .notes article section > * {
     background-color: var(--color-primary);
     margin-bottom: 40px;
-    padding: 10x;
   }
   
   .notes article section header {
@@ -83,24 +83,28 @@ html {
   }
   
   .notes article section > header {
-    border-bottom: 0.5px solid var(--color-darker);
-    font-size: 1rem;
+    /* border-bottom: 0.5px solid var(--color-darker); */
+    background-color: var(--color-darker-dark);
+    padding-left: 10px;
+    font-size: .85rem;
     top: 0rem;
     z-index: 6;
-    line-height: 1.3;
+    line-height: 1.5;
 
   }
+
   
   .notes article section section:target {
     scroll-margin-top: 3rem;
   }
   
   .notes article section section > header {
-    border-bottom: 0.5px solid var(--color-darker);
-    font-size: 1rem;
+    /* border-bottom: 0.5px solid var(--color-darker); */
+    background-color: var(--color-secondary-lighter);
+    font-size: .85rem;
     top: 3.5rem;
     z-index: 5;
-    line-height: 1.3;
+    line-height: 1.5;
   }
   
   .notes article section section section:target {
@@ -108,11 +112,12 @@ html {
   }
   
   .notes article section section section > header {
-    border-bottom: 0.5px solid var(--color-darker);
-    font-size: .95rem;
+    /* border-bottom: 0.5px solid var(--color-darker); */
+    background-color: var(--color-secondary-lightest);
+    font-size: .8rem;
     top: 6.4rem;
     z-index: 4;
-    line-height: 1.3;
+    line-height: 1.5;
   }
 
   #last-modified {
@@ -453,15 +458,15 @@ body.dark-mode {
 }
 
 .dark-mode .notes article section section > header {
-  border-bottom: 1px solid var(--color-ash-dark);
+  background-color: var(--color-primary-darkest);
 }
 
 .dark-mode .notes article section > header {
-  border-bottom: 2px solid var(--color-ash-dark);
+  background-color: var(--color-secondary-dark);
 }
 
 .dark-mode .notes article section section section > header {
-  border-bottom: 1px dotted var(--color-ash-dark);
+  background-color: var(--color-primary-darker);
 }
 
 .dark-mode .notes header a{
