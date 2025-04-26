@@ -198,7 +198,7 @@ html {
 .outline2 .contents {
   transition: 0.2s ease-in;
   opacity: 0;
-  background-color: var(--color-secondary);
+  background-color: var(--color-darker-dark);
   color: var(--color-darker);
   border-radius: 7px;
   line-height: 2;
@@ -445,6 +445,193 @@ table {
   border-radius: 0 5px 5px 0;;
 }
 
+
+  /* Overlay to grey out the rest of the screen */
+  #special-notes-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  /* Pop-up container */
+  #special-notes-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1100;
+    width: 80%;
+    max-width: 400px;
+  }
+
+  /* Close button inside the pop-up */
+  #special-notes-close {
+    display: block;
+    margin: 10px auto 0;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  #special-notes-close:hover {
+    background-color: #0056b3;
+  }
+
+  /* Button to trigger the pop-up */
+  #special-notes-trigger {
+    padding: 10px 20px;
+    background-color: #1e1e1e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1em 0 1em 0;
+  }
+
+  #special-notes-trigger:hover {
+    background-color: #218838;
+  }
+
+
+    /* Centered floating button */
+    .floating-toc-button {
+      position: fixed;
+      bottom: 0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--color-darker);
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 90;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: bold;
+  }
+  
+  /* TOC panel styles */
+  .toc-panel {
+      position: fixed;
+      bottom: 3.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      max-height: 0;
+      overflow: hidden;
+      background: var(--color-primary-dark);
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: max-height 0.3s ease;
+      z-index: 900;
+      font-size: 0.7rem;
+
+
+  }
+  
+  .toc-panel.expanded {
+      max-height: 300px;
+      overflow-y: auto;
+  }
+  
+  #toc-panel-content {
+      padding: 15px;
+  }
+  
+  #dynamic-toc {
+    list-style: none;
+    padding: 0;
+    font-size: 0.6rem; /* Smaller text */
+}
+
+#dynamic-toc li {
+    margin: 3px 0;
+}
+
+#dynamic-toc a {
+    text-decoration: none;
+    color: var(--color-secondary-lighter);
+    font-size: 0.7rem; /* Slightly larger than parent, but still small */
+}
+
+#toc-panel-content h4 {
+  color: var(--color-primary-dark);
+  background-color: var(--color-tertiary-dark);
+  padding: .5rem;
+}
+l
+/* Dark Mode Styles */
+
+.dark-mode #toc-panel-content h4 {
+  color: var(--color-primary);
+  background-color: var(--color-primary-dark);
+}
+
+.dark-mode .floating-toc-button {
+    background-color: var(--color-primary-darker);
+}
+
+.dark-mode .toc-panel {
+    background-color: var(--color-primary-darker);
+    border-color: #555;
+    color: #f0f0f0;
+}
+
+.dark-mode #dynamic-toc a {
+    color: var(--color-secondary);
+}
+
+/* Optional: Hover effects for better interactivity */
+#dynamic-toc a:hover {
+    text-decoration: underline;
+}
+
+.dark-mode #dynamic-toc a:hover {
+    color: #6bc1ff;
+}
+
+
+  /* Dark mode styles */
+
+
+  .dark-mode #special-notes-popup{
+    background: var(--color-primary-dark);
+    color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+
+  .dark-mode #special-notes-close {
+    background-color: #bb86fc;
+    color: #121212;
+  }
+
+  .dark-mode:hover #special-notes-close {
+    background-color: #9a67ea;
+  }
+
+  .dark-mode #special-notes-trigger {
+    background-color: #03dac6;
+    color: #121212;
+  }
+
+  .dark-mode:hover #special-notes-trigger {
+    background-color: #018786;
+  }
 
 /* Dark Mode Styles */
 body.dark-mode {
